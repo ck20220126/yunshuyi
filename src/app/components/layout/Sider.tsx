@@ -1,12 +1,14 @@
 /** @jsxImportSource @emotion/react */
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
-import Image from 'next/image'
 import { css } from '@emotion/react'
-import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useLockBodyScroll, useWindowScroll, useWindowSize } from '@uidotdev/usehooks'
+import { useScrollbarWidth } from 'react-use'
+import Image from 'next/image'
+import Link from 'next/link'
 import ArrowRight from '../icons/ArrowRight'
 
 type Props = {
@@ -138,16 +140,23 @@ const MenuLayer = (props: { open?: boolean; onClose?: () => void }) => {
 export default function Sider(props: Props) {
   const [openMenuPopup, setOpenMenuPopup] = useState(false)
 
-  const { width, height } = useWindowSize()
+  const { width } = useWindowSize()
   const [rectRight, setRectRight] = useState(0)
-
+  const scrollbarWidth = useScrollbarWidth()
   useEffect(() => {
-    setRectRight(width > 1920 ? (width - 1920) / 2 : 0)
+    setRectRight(width > 1920 ? Math.floor((width - 1920 - scrollbarWidth) / 2): 0)
   }, [width])
 
+  
+  const pathname = usePathname()
   const [{ y: scrollY }] = useWindowScroll();
   const [backgroundOpacity, setBackgroundOpacity] = useState(0);
   useEffect(() => {
+    if (!['/'].includes(pathname)) {
+      setBackgroundOpacity(1)
+      return
+    }
+
     const _opacity = Math.min(1, scrollY / 100)
     
     if (_opacity !== backgroundOpacity) {
@@ -161,7 +170,7 @@ export default function Sider(props: Props) {
   return (
     <>
       <aside
-        className={classNames('w-[232px] fixed z-10 top-0 right-0 bottom-0 white text-center text-white pt-[50px] pb-[184px] flex flex-col justify-center items-center', props.className)}
+        className={classNames('w-[233px] fixed z-10 top-0 right-0 bottom-0 white text-center pt-[50px] pb-[184px] flex flex-col justify-center items-center', props.className)}
         css={css`
           --translate-x: ${-rectRight}px;
           --icon-color: ${backgroundOpacity === 1 ? '#1D2129' : 'white'};

@@ -39,11 +39,11 @@ export default function ColumnSwiper() {
   const [hoverIndex, setHoverIndex] = useState(1)
   const prevCurrent = usePrevious(current)
 
-  const len = list.length
   return (
     <div className="grid grid-cols-3 h-[800px] text-white relative">
       {list.map((item, index) => (
         <motion.div
+          
           key={`swiper-${index}`}
           className="flex cursor-pointer"
           initial={{ '--content-opacity': 0.5 } as any}
