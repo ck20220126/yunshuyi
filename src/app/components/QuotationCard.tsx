@@ -18,7 +18,7 @@ export default function QuotationCard(props: {
   return (
     <div className={classNames('border border-[#EBECF0] p-[30px] bg-white', props.className)}>
       <div className="inline-block p-[5px] bg-[#BEDAFF66] rounded-[4px] leading-[20px] text-[14px] text-[#1D5FFF] font-bold">{props.tag}</div>
-      <h3 className="my-[15px] h-[56px] leading-[28px] text-[20px] font-bold">{props.title}</h3>
+      <h3 className="my-[15px] h-[56px] leading-[28px] text-[20px] font-bold line-clamp-2">{props.title}</h3>
       {props.infos.map((item, index) => (
         <p key={`info-${index}`} className='mt-[5px]'>
           <span className="text-[#86909C]">{item.label}</span>

@@ -9,6 +9,7 @@ import DetailButton from './components/DetailButton'
 import ColumnSwiper from './components/ColumnSwiper'
 import HomeNewCard from './components/HomeNewCard'
 import NewSwiper from './components/NewSwiper'
+import Link from 'next/link'
 
 const banners = [
   {
@@ -114,7 +115,7 @@ export default function Home() {
           </div>
         </div>
 
-        <NewSwiper className='py-[150px]' />
+        <NewSwiper className="py-[150px]" />
 
         <div className="bg-[#F7F8FA] min-h-[810px] py-[150px] flex justify-between">
           <div className="flex-1 ml-[10.5%] mr-[8%] pt-[20px]">
@@ -134,7 +135,9 @@ export default function Home() {
             <p className="leading-[44px] text-[20px] text-[#c9cdd4]">News</p>
             <h2 className="mt-[5px] leading-[44px] text-[36px] text-[#1d2129] font-bold">新闻与媒体</h2>
             <Divider className="my-[30px]" />
-            <DetailButton className="mt-[50px]">查看更多</DetailButton>
+            <Link href={'/news'}>
+              <DetailButton className="mt-[50px]">查看更多</DetailButton>
+            </Link>
           </div>
           <div className="flex-shrink-0 wax-w-full w-[920px]">
             {news.map((item, index) => (

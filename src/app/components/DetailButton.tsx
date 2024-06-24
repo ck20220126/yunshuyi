@@ -10,6 +10,7 @@ export default function DetailButton(props: {
   className?: string
   children?: React.ReactNode
   useHover?: boolean
+  onClick?: () => void
 }) {
 
   const { color = '#86909C', useHover = true } = props
@@ -31,6 +32,7 @@ export default function DetailButton(props: {
           }
         ` : ''}
       `}
+      onClick={props.onClick}
     >
       <div 
         className="w-[60px] h-[60px] flex justify-center items-center icon"

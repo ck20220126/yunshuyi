@@ -28,7 +28,7 @@ const list = [
   {
     englishTitle: 'Logistics',
     img: '/column-swiper-3.png',
-    title: '集采急售',
+    title: '仓储物流',
     desc: '以物流数字经济构建发展新格局，利用互联网、物联网、大数据和人工智能作为技术支撑，搭建全新的物流仓储平台，全面提升商业流通效率、助力产业服务升级',
     link: '#',
   },

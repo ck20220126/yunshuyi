@@ -7,6 +7,7 @@ import classNames from 'classnames'
 import { useWindowScroll } from '@uidotdev/usehooks'
 import { css } from '@emotion/react'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 
 type Props = {
   className?: string
@@ -42,8 +43,8 @@ export default function Header(props: Props) {
   }, [])
 
   return (
-    <header>
-      <div ref={footerRef} className={classNames('w-full max-w-[1920px] pr-[232px] fixed z-20 top-0 left-1/2 -translate-x-1/2', props.className)}>
+    <>
+      <header ref={footerRef} className={classNames('w-full max-w-[1920px] pr-[232px] fixed z-20 top-0 left-1/2 -translate-x-1/2', props.className)}>
         <div
           className="absolute inset-0 bg-white z-0"
           css={css`
@@ -61,7 +62,9 @@ export default function Header(props: Props) {
           style={{ opacity: backgroundOpacity }}
         />
         <div className={classNames('relative z-1 h-[150px] flex items-center justify-between px-[100px]', backgroundOpacity <= 0.5 && 'text-white')}>
-          <Link href={'/'}>{/* <Image src={"/logo-white.png"} width={192} height={80} alt="logo" /> */}</Link>
+          <Link href={'/'}>
+            <Image src={backgroundOpacity <= 0.5 ? "/logo-white.png" : '/logo.png'} width={192} height={80} alt="logo" />
+          </Link>
           <div className="inline-flex items-center">
             <Link href={'/pq-sale'} title="集采集售" className="p-[25px]">
               集采集售
@@ -112,9 +115,9 @@ export default function Header(props: Props) {
             </Link>
           </div>
         </div>
-      </div>
+      </header>
       {/* placeholder */}
-      <div className='h-[150px]' />
-    </header>
+      {!immersive && <div className="h-[150px]" />}
+    </>
   )
 }
