@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
-"use client";
+'use client'
 
 import { useEffect, useRef, useState } from "react";
 import { css } from '@emotion/react'
-import { useVisibilityChange } from "@uidotdev/usehooks";
+// import { useVisibilityChange } from "@uidotdev/usehooks";
 import classNames from "classnames";
 import Image from "next/image";
 
@@ -39,6 +39,7 @@ export default function HomeBanner(props: Props) {
       timer.current = undefined
     }
   }
+
   useEffect(() => {
     return () => {
       endRotation()
@@ -46,11 +47,11 @@ export default function HomeBanner(props: Props) {
   }, [])
 
   // 优化: 离开页面时暂停轮播
-  const documentVisible = useVisibilityChange()
+  /* const documentVisible = useVisibilityChange()
   useEffect(() => {
-    documentVisible ? startRotation() : endRotation()
-  }, [documentVisible])
-  
+    [documentVisible ? startRotation() : endRotation()]
+  }, [documentVisible]) */
+
   return (
     <div className={classNames('relative text-white', props.className)}>
       {list.map((item, idx) => (
