@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Search() {
   return (
     <div className="pr-[232px]">
-      <div className="mx-[10.5%] mt-[30px] pb-[150px]">
+      <div className="mx-[11.75%] mt-[30px] pb-[150px]">
         <Breadcrumb list={[{ title: '首页', link: '/' }, { title: '金融服务', link: '/financial-service' }, { title: '金融产品', link: '/financial-service-search' }, { title: '金融产品详情' }]} />
         <div className="mt-[30px] border border-[#EBECF0]">
           <div className="px-[40px] py-[15px] flex items-center bg-[#f7f8fa]">
@@ -16,8 +16,8 @@ export default function Search() {
             <div className="flex items-center">
               <div>
                 <p className="leading-[24px] text-[16px] text-[#86909C]">参考范围</p>
-                <p className="mt-[8px] inline-flex items-baseline leading-[28px] text-[24px] text-[#F33030] font-bold">
-                  10-100<span className="relative -top-[2px] ml-[5px] leading-[22px] text-[14px] font-normal">万</span>
+                <p className="mt-[8px] inline-flex items-baseline leading-[42px] text-[36px] text-[#F33030] font-bold">
+                  10-100<span className="relative -top-[2px] ml-[5px] leading-[24px] text-[16px] font-normal">万</span>
                 </p>
               </div>
               <div className="ml-[100px]">

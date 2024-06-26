@@ -33,6 +33,10 @@ export default function Header(props: Props) {
     }
   }, [y])
 
+  useEffect(() => {
+    setBackgroundOpacity(immersive && y < 50 ? 0 : 1)
+  }, [immersive])
+
   const footerRef = useRef<HTMLDivElement>()
   const [rectHeight, setRectRight] = useState<number>(0)
   useEffect(() => {
@@ -69,13 +73,13 @@ export default function Header(props: Props) {
             <Link href={'/pq-sale'} title="集采集售" className="p-[25px]">
               集采集售
             </Link>
-            <Link href={'#'} title="云品优选" className="p-[25px]">
+            <Link href={'/mall'} title="云品优选" className="p-[25px]">
               云品优选
             </Link>
-            <Link href={'#'} title="金融服务" className="p-[25px]">
+            <Link href={'/financial-service'} title="金融服务" className="p-[25px]">
               金融服务
             </Link>
-            <Link href={'#'} title="仓储物流" className="p-[25px]">
+            <Link href={'/logistics'} title="仓储物流" className="p-[25px]">
               仓储物流
             </Link>
             <div className="w-[1px] h-[56px] bg-white/40 mx-[70px]" />

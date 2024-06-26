@@ -10,7 +10,7 @@ const data = {
 export default function Article() {
   return (
     <div className="pr-[232px] pb-[150px]">
-      <div className="mt-[10px] mx-[10.5%] py-[20px] border-b border-[#EBECF0]">
+      <div className="mt-[10px] mx-[11.75%] py-[20px] border-b border-[#EBECF0]">
         <Breadcrumb
           list={[
             { title: '首页', link: '/' },

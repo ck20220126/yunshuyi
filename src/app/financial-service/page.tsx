@@ -13,7 +13,7 @@ export default function FinancialService() {
   return (
     <div className="pr-[232px]">
       <DetailCover image="/financial-service-header.png" title="供应链 金融服务支撑" subtitle="下游企业通过预付款融资方式拉长支付采购货款的账期，同时这也解决核心企业的生产资金需求" />
-      <div className="px-[10.5%] py-[150px]">
+      <div className="px-[11.75%] py-[150px]">
         <div
           className="grid grid-cols-3 gap-x-[30px]"
           css={css`
@@ -65,7 +65,7 @@ export default function FinancialService() {
           </div>
         </div>
       </div>
-      <div className="bg-[#f7f8fa] px-[10.5%] py-[50px]">
+      <div className="bg-[#f7f8fa] px-[11.75%] py-[50px]">
         <div className="relative">
           <p className="leading-[44px] text-[20px] text-[#c9cdd4]">Partner</p>
           <h2 className="mt-[5px] leading-[44px] text-[36px] text-[#1d2129] font-bold">为你推荐</h2>
@@ -80,7 +80,7 @@ export default function FinancialService() {
         <FinancialServiceCard bankLogo="/bank-8.png" title="短期流动资金贷款" className="mt-[30px]" />
         <FinancialServiceCard bankLogo="/bank-2.png" title="普惠型小微企业标准化房产抵押授信" className="mt-[30px]" />
       </div>
-      <div className="px-[10.5%] py-[50px]">
+      <div className="px-[11.75%] py-[50px]">
         <div className="relative">
           <p className="leading-[44px] text-[20px] text-[#c9cdd4]">Partner</p>
           <h2 className="mt-[5px] leading-[44px] text-[36px] text-[#1d2129] font-bold">合作机构</h2>

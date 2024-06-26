@@ -47,7 +47,7 @@ export default function Home() {
       <HomeBanner list={banners} className="w-full h-dvh" />
       {/* content start */}
       <div className="pr-[232px]">
-        <div className="py-[100px] px-[10.5%]">
+        <div className="py-[100px] px-[11.75%]">
           <div className="flex justify-center">
             <div className="flex">
               <div className="w-[300px] h-[500px] relative">
@@ -118,7 +118,7 @@ export default function Home() {
         <NewSwiper className="py-[150px]" />
 
         <div className="bg-[#F7F8FA] min-h-[810px] py-[150px] flex justify-between">
-          <div className="flex-1 ml-[10.5%] mr-[8%] pt-[20px]">
+          <div className="flex-1 ml-[11.75%] mr-[8%] pt-[20px]">
             <p className="leading-[44px] text-[20px] text-[#c9cdd4]">Partners</p>
             <h2 className="mt-[5px] leading-[44px] text-[36px] text-[#1d2129] font-bold">合作生态</h2>
             <Divider className="my-[30px]" />
@@ -131,7 +131,7 @@ export default function Home() {
         </div>
 
         <div className="min-h-[810px] py-[150px] flex justify-between">
-          <div className="flex-1 ml-[10.5%] mr-[8%] pt-[20px]">
+          <div className="flex-1 ml-[11.75%] mr-[8%] pt-[20px]">
             <p className="leading-[44px] text-[20px] text-[#c9cdd4]">News</p>
             <h2 className="mt-[5px] leading-[44px] text-[36px] text-[#1d2129] font-bold">新闻与媒体</h2>
             <Divider className="my-[30px]" />

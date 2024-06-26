@@ -4,7 +4,7 @@ import FinancialServiceCard from '@/app/components/FinancialServiceCard'
 export default function Search() {
   return (
     <div className="pr-[232px]">
-      <div className="mx-[10.5%] mt-[30px] pb-[150px]">
+      <div className="mx-[11.75%] mt-[30px] pb-[150px]">
         <Breadcrumb list={[{ title: '首页', link: '/' }, { title: '金融服务', link: '/financial-service' }, { title: '金融产品' }]} />
 
         <FinancialServiceCard bankLogo="/bank-8.png" title="短期流动资金贷款" className="mt-[30px]" />

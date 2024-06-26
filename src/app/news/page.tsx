@@ -35,7 +35,7 @@ const news = {
       date: '2024-02-05',
     },
     {
-      id: '1-1',
+      id: '1-2',
       image: '/new-img1.png',
       title: '聚焦新质生产力 提升县域产业链发展水平',
       desc: '2024年1月，习近平总书记在中共中央政治局第十一次集体学习时强调，“要围绕发展新质生产力布局产业链，提升产业链供应链韧性和安全水平”。县域作为我国经济发展的基本单元，是发展新质生产力的重要空间载体。围绕发展新质生产力科学布局县域产业链并不断提升其发展水平，可为县域经济发展开辟新领域新赛道，为全方位推动高质量发展增势赋能。',
@@ -55,7 +55,7 @@ export default function Info() {
   return (
     <div className="pr-[232px]">
       <DetailCover image="/news-header-bg.png" title="新闻与媒体" subtitle="传播行业互联网资讯，共建供应链体系" />
-      <div className="px-[10.5%] pt-[130px] pb-[150px]">
+      <div className="px-[11.75%] pt-[130px] pb-[150px]">
         <Tabs
           list={[
             {

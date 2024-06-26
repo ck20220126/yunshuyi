@@ -113,7 +113,7 @@ export default function NewSwiper(props: { className?: string }) {
 
   return (
     <div className={classNames('relative flex', props.className)}>
-      <div className="flex-1 ml-[10.5%] mr-[8%] pt-[20px]">
+      <div className="flex-1 ml-[11.75%] mr-[8%] pt-[20px]">
         <p className="leading-[44px] text-[20px] text-[#c9cdd4]">County level</p>
         <h2 className="mt-[5px] leading-[44px] text-[36px] text-[#1d2129] font-bold">{list[swiperIndex].title}</h2>
         <Divider className="my-[30px]" />

@@ -206,7 +206,7 @@ export default function Procurement() {
 
   return (
     <div className="pr-[232px]">
-      <div className="mx-[10.5%] mt-[30px] pb-[150px]">
+      <div className="mx-[11.75%] mt-[30px] pb-[150px]">
         <Breadcrumb list={[{ title: '首页', link: '/' }, { title: '集采集售', link: '/pq-sale' }, { title: '招采报价' }]} />
         <div className="mt-[30px] border border-[#EBECF0] p-[30px]"></div>
         <div className="mt-[30px] border border-[#EBECF0] p-[30px]"></div>

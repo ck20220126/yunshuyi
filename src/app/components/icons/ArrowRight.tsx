@@ -1,6 +1,6 @@
 const ArrowRight = (props: { className?: string }) => {
   return (
-    <svg className={props.className} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className={props.className} width="100%" height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_62_8507)">
         <path d="M8.78139 8.00047L5.48153 11.3003L6.42432 12.2431L10.667 8.00047L6.42432 3.75781L5.48153 4.70062L8.78139 8.00047Z" fill="currentColor" />
       </g>
