@@ -41,6 +41,8 @@ export default function HomeBanner(props: Props) {
   }
 
   useEffect(() => {
+    startRotation()
+    
     return () => {
       endRotation()
     }
