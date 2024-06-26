@@ -10,7 +10,7 @@ import MallProduct from '../components/MallProduct'
 export default function Store() {
   return (
     <div className="pr-[232px]">
-      <DetailCover image="/store-header.png" title="禄劝农家散装自烤酒" subtitle="500g散装 | ¥25.00" />
+      <DetailCover image="/mall-header.png" title="禄劝农家散装自烤酒" subtitle="500g散装 | ¥25.00" />
       <div className="px-[11.75%] py-[150px]">
         <div className="relative">
           <p className="leading-[44px] text-[20px] text-[#c9cdd4]">Preferred</p>
