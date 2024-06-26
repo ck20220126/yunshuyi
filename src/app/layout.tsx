@@ -12,8 +12,8 @@ import 'primereact/resources/themes/saga-blue/theme.css'
 import 'primereact/resources/primereact.min.css'
 
 export const metadata: Metadata = {
-  title: '松赞',
-  description: '松赞',
+  title: '云数驿',
+  description: '云数驿',
 }
 
 export default function RootLayout({
