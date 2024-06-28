@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 'use client'
 
-import { useSearchParams } from 'next/navigation'
 import Breadcrumb from '@/app/components/Breadcrumb'
 import SearchCard from '@/app/components/SearchCard'
 import { useState } from 'react'
@@ -120,7 +119,6 @@ const biddingDetails = [
 ]
 
 export default function QuotationResult() {
-  const searchParams = useSearchParams()
 
   const [search, setSearch] = useState<Record<string, any>>({})
   function onSearchChange(value) {

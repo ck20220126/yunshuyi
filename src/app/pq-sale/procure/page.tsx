@@ -1,13 +1,12 @@
 'use client'
 
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation'
 import Breadcrumb from '@/app/components/Breadcrumb'
 import ProcureProduct from '@/app/components/ProcureProduct'
 import SearchCard from '@/app/components/SearchCard'
 
 export default function Procure() {
-
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams()
   const type = searchParams.get('type') || 'all'
 
   return (
