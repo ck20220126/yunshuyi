@@ -76,6 +76,8 @@ export default function Home() {
         </div>
 
         <ColumnSwiper />
+        
+        <NewSwiper className="py-[150px]" />
 
         <div
           className="min-h-[523px] px-[6.5%] pt-[100px] pb-[96px] text-white text-center"
@@ -114,8 +116,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        <NewSwiper className="py-[150px]" />
 
         <div className="bg-[#F7F8FA] min-h-[810px] py-[150px] flex justify-between">
           <div className="flex-1 ml-[11.75%] mr-[8%] pt-[20px]">
