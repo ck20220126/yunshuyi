@@ -65,42 +65,68 @@ export default function Header(props: Props) {
           `}
           style={{ opacity: backgroundOpacity }}
         />
-        <div className={classNames('relative z-1 h-[150px] flex items-center justify-between px-[100px]', backgroundOpacity <= 0.5 && 'text-white')}>
+        <div
+          className={classNames('relative z-1 h-[150px] flex items-center justify-between px-[100px] text-[16px]', backgroundOpacity <= 0.5 && 'text-white')}
+          css={css`
+            .item {
+              padding: 25px 0;
+              margin: 0 25px;
+              position: relative;
+              &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 15px;
+                width: 100%;
+                height: 1px;
+                background-color: ${backgroundOpacity <= 0.5 ? 'white' : '#1D5FFF'};
+                opacity: 0;
+                transition: opacity linear 0.2s
+              }
+              &:hover::after {
+                opacity: 1;
+              }
+            }
+          `}
+        >
           <Link href={'/'}>
-            <Image src={backgroundOpacity <= 0.5 ? "/logo-white.png" : '/logo.png'} width={192} height={80} alt="logo" />
+            <Image src={backgroundOpacity <= 0.5 ? '/logo-white.png' : '/logo.png'} width={192} height={80} alt="logo" />
           </Link>
           <div className="inline-flex items-center">
-            <Link href={'/pq-sale'} title="集采集售" className="p-[25px]">
+            <Link href={'/pq-sale'} title="集采集售" className="item">
               集采集售
             </Link>
-            <Link href={'/mall'} title="云品优选" className="p-[25px]">
+            <Link href={'/mall'} title="云品优选" className="item">
               云品优选
             </Link>
-            <Link href={'/financial-service'} title="金融服务" className="p-[25px]">
+            <Link href={'/financial-service'} title="金融服务" className="item">
               金融服务
             </Link>
-            <Link href={'/logistics'} title="仓储物流" className="p-[25px]">
+            <Link href={'/logistics'} title="仓储物流" className="item">
               仓储物流
             </Link>
             <div className="w-[1px] h-[56px] bg-white/40 mx-[70px]" />
-            <Link href={'#'} title="工作台（企业用户）" className="inline-flex items-center p-[25px]">
-              {/* <Image src={"ic-user.svg"} width={24} height={24} alt="" className="mr-[10px]" /> */}
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clipPath="url(#clip0_85_189)">
-                  <path
-                    d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM12.1597 16C10.1243 16 8.29182 16.8687 7.01276 18.2556C8.38039 19.3474 10.114 20 12 20C13.9695 20 15.7727 19.2883 17.1666 18.1081C15.8956 16.8074 14.1219 16 12.1597 16ZM12 4C7.58172 4 4 7.58172 4 12C4 13.8106 4.6015 15.4807 5.61557 16.8214C7.25639 15.0841 9.58144 14 12.1597 14C14.6441 14 16.8933 15.0066 18.5218 16.6342C19.4526 15.3267 20 13.7273 20 12C20 7.58172 16.4183 4 12 4ZM12 5C14.2091 5 16 6.79086 16 9C16 11.2091 14.2091 13 12 13C9.79086 13 8 11.2091 8 9C8 6.79086 9.79086 5 12 5ZM12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7Z"
-                    fill="currentColor"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_85_189">
-                    <rect width="24" height="24" fill="currentColor" />
-                  </clipPath>
-                </defs>
-              </svg>
+            <Link href={'#'} title="工作台（企业用户）" className="inline-flex items-center item">
+              <i className="size-[24px]">
+                <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clipPath="url(#clip0_85_189)">
+                    <path
+                      d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM12.1597 16C10.1243 16 8.29182 16.8687 7.01276 18.2556C8.38039 19.3474 10.114 20 12 20C13.9695 20 15.7727 19.2883 17.1666 18.1081C15.8956 16.8074 14.1219 16 12.1597 16ZM12 4C7.58172 4 4 7.58172 4 12C4 13.8106 4.6015 15.4807 5.61557 16.8214C7.25639 15.0841 9.58144 14 12.1597 14C14.6441 14 16.8933 15.0066 18.5218 16.6342C19.4526 15.3267 20 13.7273 20 12C20 7.58172 16.4183 4 12 4ZM12 5C14.2091 5 16 6.79086 16 9C16 11.2091 14.2091 13 12 13C9.79086 13 8 11.2091 8 9C8 6.79086 9.79086 5 12 5ZM12 7C10.8954 7 10 7.89543 10 9C10 10.1046 10.8954 11 12 11C13.1046 11 14 10.1046 14 9C14 7.89543 13.1046 7 12 7Z"
+                      fill="currentColor"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_85_189">
+                      <rect width="24" height="24" fill="currentColor" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </i>
               <span>工作台（企业用户）</span>
             </Link>
-            <Link href={'#'} title="登录/注册" className="inline-flex items-center p-[25px] pr-0">
+            <Link href={'#'} title="登录/注册" className="item inline-flex items-center pr-0">
               {/* <Image src={"ic-workbench.svg"} width={24} height={24} alt="" className="mr-[10px]" /> */}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_85_192)">

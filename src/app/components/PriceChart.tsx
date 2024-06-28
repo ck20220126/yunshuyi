@@ -4,7 +4,6 @@
 import * as echarts from 'echarts/core'
 import ReactECharts from 'echarts-for-react'
 import { useMemo, useState } from 'react'
-import { Button } from 'antd'
 import ArrowRight from './icons/ArrowRight'
 import classNames from 'classnames'
 
@@ -109,7 +108,7 @@ export default function PriceChart(props: { className?: string }) {
     if (newVal < 0) {
       setIndex(0)
     } else if (newVal >= len) {
-      setIndex(data.length / size - 1)
+      setIndex(len - 1)
     } else {
       setIndex(newVal)
     }

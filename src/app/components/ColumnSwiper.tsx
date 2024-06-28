@@ -1,14 +1,13 @@
 /** @jsxImportSource @emotion/react */
 'use client'
 
-import Image from 'next/image'
-import DetailButton from './DetailButton'
-import Divider from './Divider'
-import Link from 'next/link'
-import { css } from '@emotion/react'
-import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { usePrevious } from '@uidotdev/usehooks'
+import { css } from '@emotion/react'
+import { motion } from 'framer-motion'
+
+import Divider from './Divider'
+import DetailButton from './DetailButton'
 
 const list = [
   {

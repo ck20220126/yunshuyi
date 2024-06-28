@@ -13,14 +13,14 @@ import Link from 'next/link'
 
 const banners = [
   {
-    url: 'https://s2.loli.net/2024/06/01/Cs4wlqAtOcTjrYI.png',
-    // title: '智能化供应链，引领数字化时代',
-    // subtitles: ['数智化大宗商品集采・集售', '供应链金融服务', '供应链仓储物流']
+    url: '/home-banner-1.png',
+    title: '智能化供应链，引领数字化时代',
+    subtitles: ['数智化大宗商品集采・集售', '供应链金融服务', '供应链仓储物流'],
   },
   {
-    url: 'https://s2.loli.net/2024/06/01/8EtuqaOzbUJyefY.png',
-    // title: '智能化供应链，引领数字化时代',
-    // subtitles: ['数智化大宗商品集采・集售', '供应链金融服务', '供应链仓储物流']
+    url: '/home-banner-2.png',
+    title: '智能化供应链，引领数字化时代',
+    subtitles: ['数智化大宗商品集采・集售', '供应链金融服务', '供应链仓储物流'],
   },
 ]
 
@@ -127,7 +127,36 @@ export default function Home() {
             </p>
           </div>
           {/* TODO: image placeholder */}
-          <div className="flex-shrink-0 wax-w-full w-[922px] h-[526px] bg-[red]/10"></div>
+          {/* <div className="flex-shrink-0 wax-w-full w-[922px] h-[526px] bg-[red]/10"></div> */}
+          <div className="flex-shrink-0 wax-w-full w-[922px] h-[526px] grid grid-cols-3 border-b border-[#EBECF0]">
+            <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-top-[11px] before:-left-[1px] before:bg-[#E8ECF0] after:absolute after:w-[10px] after:h-[1px] after:-top-[1px] after:-left-[11px] after:bg-[#E8ECF0]">
+              <Image src="/business-partner-icon-1.png" alt="" width={191} height={88} />
+            </div>
+            <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-top-[11px] before:-left-[1px] before:bg-[#E8ECF0]">
+              <Image src="/business-partner-icon-2.png" alt="" width={191} height={88} />
+            </div>
+            <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-top-[11px] before:-left-[1px] before:bg-[#E8ECF0]">
+              <Image src="/business-partner-icon-3.png" alt="" width={191} height={88} />
+            </div>
+            <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[10px] before:h-[1px] before:-top-[-1px] before:-left-[11px] before:bg-[#E8ECF0] after:absolute after:w-[10px] after:h-[1px] after:-bottom-[1px] after:-left-[11px] after:bg-[#E8ECF0]">
+              <Image src="/business-partner-icon-4.png" alt="" width={191} height={88} />
+            </div>
+            <div className="flex items-center justify-center border-t border-l border-[#EBECF0]">
+              <Image src="/business-partner-icon-5.png" alt="" width={191} height={88} />
+            </div>
+            <div className="flex items-center justify-center border-t border-l border-[#EBECF0]">
+              <Image src="/business-partner-icon-6.png" alt="" width={191} height={88} />
+            </div>
+            <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-bottom-[11px] before:-left-[1px] before:bg-[#E8ECF0] after:absolute after:w-[10px] after:h-[1px] after:-bottom-[1px] after:-left-[11px] after:bg-[#E8ECF0]">
+              <Image src="/business-partner-icon-7.png" alt="" width={191} height={88} />
+            </div>
+            <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-bottom-[11px] before:-left-[1px] before:bg-[#E8ECF0]">
+              <Image src="/business-partner-icon-8.png" alt="" width={191} height={88} />
+            </div>
+            <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-bottom-[11px] before:-left-[1px] before:bg-[#E8ECF0]">
+              <Image src="/business-partner-icon-9.png" alt="" width={191} height={88} />
+            </div>
+          </div>
         </div>
 
         <div className="min-h-[810px] py-[150px] flex justify-between">

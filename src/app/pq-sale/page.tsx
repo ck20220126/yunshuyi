@@ -4,17 +4,15 @@
 import React, { useState } from 'react'
 import classNames from 'classnames'
 import { motion } from 'framer-motion'
+import { css } from '@emotion/react'
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { DataTable } from 'primereact/datatable'
-import { Column } from 'primereact/column'
 import DetailCover from '../components/DetailCover'
 import Divider from '../components/Divider'
 import Tabs from '../components/Tabs'
 import ArrowRight from '../components/icons/ArrowRight'
 import QuotationCard from '../components/QuotationCard'
-import { css } from '@emotion/react'
 import { Table } from 'antd'
 
 const quotationData = {
@@ -442,7 +440,7 @@ const biddingDetails = [
   },
 ]
 
-const ProcCard = (props: { id: number; image: string; title: string; className?: string }) => {
+const ProcureClassCard = (props: { id: number; image: string; title: string; className?: string }) => {
   return (
     <Link href={`/pq-sale/procure?type=${props.id}`} className={classNames('block', props.className)}>
       <motion.div className={'relative w-full h-full'} initial={{ '--mark-bg': 'rgba(0,0,0,0.5)' } as any} whileHover={{ '--mark-bg': 'rgba(29, 95, 255, 0.9)' } as any}>
@@ -486,18 +484,18 @@ export default function CpSale() {
       </div>
       <div className="flex gap-x-[30px] pb-[150px]">
         <div className="flex-1 flex gap-x-[30px] border-blue-100">
-          <ProcCard image="/procure-img1.png" title="大宗粮油" id={1} className="h-full flex-1" />
+          <ProcureClassCard id={1} image="/procure-img1.png" title="大宗粮油" className="h-full flex-1" />
           <div className="flex-1">
-            <ProcCard image="/procure-img2.png" title="建筑建材" id={2} className="h-[280px]" />
-            <ProcCard image="/procure-img3.png" title="办公用品" id={3} className="mt-[30px] h-[280px]" />
+            <ProcureClassCard id={2} image="/procure-img2.png" title="建筑建材"className="h-[280px]" />
+            <ProcureClassCard id={3} image="/procure-img3.png" title="办公用品" className="mt-[30px] h-[280px]" />
           </div>
         </div>
         <div className="flex-1 flex flex-col gap-x-[30px]">
           <div className="flex-1 flex">
-            <ProcCard image="/procure-img4.png" title="日用百货" id={4} className="flex-1 h-[280px] " />
-            <ProcCard image="/procure-img5.png" title="生鲜食品" id={5} className="ml-[30px] flex-1 h-[280px]" />
+            <ProcureClassCard id={4} image="/procure-img4.png" title="日用百货" className="flex-1 h-[280px] " />
+            <ProcureClassCard id={5} image="/procure-img5.png" title="生鲜食品" className="ml-[30px] flex-1 h-[280px]" />
           </div>
-          <ProcCard image="/procure-img6.png" title="农资农产" id={6} className="flex-1 mt-[30px]" />
+          <ProcureClassCard id={6} image="/procure-img6.png" title="农资农产" className="flex-1 mt-[30px]" />
         </div>
       </div>
 
@@ -522,7 +520,7 @@ export default function CpSale() {
           active={quotationActive}
           onChange={setQuotationActive}
           extra={
-            <Link href={'/quotation'} className="flex items-center leading-[24px] text-[16px] text-[#4E5969]">
+            <Link href={'/pq-sale/quotation'} className="flex items-center leading-[24px] text-[16px] text-[#4E5969]">
               <span>查看更多</span>
               <ArrowRight className="size-[22px]" />
             </Link>
@@ -552,7 +550,7 @@ export default function CpSale() {
           active={publicityActive}
           onChange={setPublicityActive}
           extra={
-            <Link href={'/quotation-result'} className="flex items-center leading-[24px] text-[16px] text-[#4E5969]">
+            <Link href={'/pq-sale/quotation/result'} className="flex items-center leading-[24px] text-[16px] text-[#4E5969]">
               <span>查看更多</span>
               <ArrowRight className="size-[22px]" />
             </Link>
