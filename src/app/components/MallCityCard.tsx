@@ -1,4 +1,7 @@
-import { useEffect, useMemo, useState } from 'react'
+/** @jsxImportSource @emotion/react */
+'use client'
+
+import React, { useEffect, useImperativeHandle, useMemo, useState } from 'react'
 import classNames from 'classnames'
 import { Divider as AntdDivider } from 'antd'
 import Divider from './Divider'
@@ -329,16 +332,26 @@ const data = [
   },
 ]
 
-export default function MallCityCard(props: { city?: string; onChangeCity?: (city: string) => void; className?: string }) {
-  const { city, onChangeCity } = props
+export type Props = { city?: string; onChangeCity?: (city: string) => void; className?: string }
+
+const MallCityCard = React.forwardRef<
+  {
+    changeCity?: (city: string) => void
+  },
+  Props
+>((props, ref) => {
+  const { city, onChangeCity } = props || {}
   const [index, setIndex] = useState(0)
 
   const len = data.length
   const current = useMemo(() => {
     const value = data[index]
-    onChangeCity?.(value.city)
     return value
   }, [index])
+
+  useEffect(() => {
+    onChangeCity?.(current.city)
+  }, [current])
 
   function toggleIndex(val) {
     const newVal = index + val
@@ -351,14 +364,26 @@ export default function MallCityCard(props: { city?: string; onChangeCity?: (cit
     }
   }
 
-  useEffect(() => {
-    if (city) {
-      const newIndex = data.findIndex((item) => item.city === city)
-      if (newIndex > -1) {
-        setIndex(newIndex)
-      }
+  function changeCity(_city) {
+    const newIndex = data.findIndex((item) => item.city === _city)
+    if (newIndex > -1) {
+      setIndex(newIndex)
     }
+  }
+
+  useEffect(() => {
+    changeCity(city)
   }, [city])
+
+  useImperativeHandle(
+    ref,
+    () => {
+      return {
+        changeCity,
+      }
+    },
+    []
+  )
 
   return (
     <div className={classNames('w-[590px] bg-white broder border-[#E6D9CD] px-[50px] py-[45px]', props.className)}>
@@ -394,4 +419,8 @@ export default function MallCityCard(props: { city?: string; onChangeCity?: (cit
       </div>
     </div>
   )
-}
+})
+
+MallCityCard.displayName = 'MallCityCard'
+
+export default MallCityCard

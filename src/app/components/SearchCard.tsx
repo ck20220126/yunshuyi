@@ -6,7 +6,7 @@ import classNames from 'classnames'
 import { isEmpty } from 'lodash-es'
 import { Button, Divider, Input } from 'antd'
 import { CaretDownFilled, CaretUpFilled, DownOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 
 type Tag = {
   label: string
@@ -77,7 +77,16 @@ const Tags = (props: { className?: string; options: Tag[]; defaultValue?: Tag['v
   )
 }
 
-type Props = {
+type FilterType = undefined | 'ascend' | 'descend'
+const defaultRenderTotal: Props['pagination']['renderTotal'] = (options) => {
+  return (
+    <>
+      共 <span className="text-[#1D5FFF]">{options.total}</span> 条数据
+    </>
+  )
+}
+
+export type Props = {
   className?: string
   tags?: {
     title: string
@@ -106,20 +115,14 @@ type Props = {
   }
   showFilterBar?: boolean
   extra?: React.ReactNode
-  onChange?: (params: { tags: Record<string, any>; filters: Record<string, any> }) => void
+  onChange?: (params: { searchKeyword?: string; tags: Record<string, any>; filters: Record<string, any> }) => void
+  onSearch?: (params: { searchKeyword?: string; tags: Record<string, any>; filters: Record<string, any> }) => void
 }
-
-type FilterType = undefined | 'ascend' | 'descend'
-const defaultRenderTotal: Props['pagination']['renderTotal'] = (options) => {
-  return (
-    <>
-      共 <span className="text-[#1D5FFF]">{options.total}</span> 条数据
-    </>
-  )
-}
-export default function SearchCard(props: Props) {
-  const { tags, filters, extra, pagination = { pageSize: 15 }, showFilterBar = true, onChange } = props
+const SearchCard = (props: Props) => {
+  const { tags, filters, extra, pagination = { pageSize: 15 }, showFilterBar = true, onChange, onSearch } = props
   const { pageSize = 15, total, renderTotal = defaultRenderTotal } = pagination
+
+  const [searchInputValue, setSearchInputValue] = useState('')
 
   const [filterParams, setFilterParams] = useImmer<Record<string, FilterType>>({})
 
@@ -181,9 +184,17 @@ export default function SearchCard(props: Props) {
     })
   }
 
+  const params = useMemo(() => {
+    return { searchKeyword: searchInputValue, tags: tagParams, filters: { ...filterParams, ...toggleOptionParams } }
+  }, [searchInputValue, filterParams, toggleOptionParams, tagParams])
+
   useEffect(() => {
-    onChange?.({ tags: tagParams, filters: { ...filterParams, ...toggleOptionParams } })
-  }, [filterParams, toggleOptionParams, tagParams])
+    onChange?.(params)
+  }, [params])
+
+  function onSubmit() {
+    onSearch?.(params)
+  }
 
   return (
     <div className={classNames('select-none', props.className)}>
@@ -192,10 +203,23 @@ export default function SearchCard(props: Props) {
           <span className="min-w-[82px] flex-shrink-0 text-[14px] text-[#86909C]">搜索</span>
           <div className="ml-[15px] flex-1 flex items-center">
             <div className="flex-1 relative">
-              <Input size="large" placeholder="请输入关键字搜索" className="w-full !pr-[50px]" />
-              <img src="/ic-search.svg" className="size-[20px] absolute right-[16px] top-1/2 transform -translate-y-1/2" />
+              <Input
+                size="large"
+                placeholder="请输入关键字搜索"
+                className={classNames('w-full')}
+                allowClear
+                suffix={
+                  <img src="/ic-search.svg" className={classNames('w-full', { hidden: !!searchInputValue })} />
+                }
+                onChange={(event) => setSearchInputValue(event.target.value)}
+                onPressEnter={onSubmit}
+              />
+
+              {/* <div className="size-[20px] absolute z-[10] right-[16px] top-1/2 transform -translate-y-1/2">
+                <img src="/ic-search.svg" className={classNames('w-full', { hidden: !!searchInputValue })} />
+              </div> */}
             </div>
-            <Button type="primary" size="large" className="w-[144px] ml-[20px] flex-shrink-0">
+            <Button htmlType="submit" type="primary" size="large" className="w-[144px] ml-[20px] flex-shrink-0" onClick={onSubmit}>
               搜索
             </Button>
           </div>
@@ -264,3 +288,5 @@ export default function SearchCard(props: Props) {
     </div>
   )
 }
+
+export default SearchCard

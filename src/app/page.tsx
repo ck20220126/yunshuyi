@@ -47,8 +47,9 @@ export default function Home() {
       <HomeBanner list={banners} className="w-full h-dvh" />
       {/* content start */}
       <div className="pr-[232px]">
-        <div className="py-[100px] px-[11.75%]">
-          <div className="flex justify-center">
+        <div className="py-[100px] px-[11.75%] relative">
+          <Image src={'/one-bg-2.png'} alt="" fill className="absolute w-full h-full object-cover" />
+          <div className="relative z-10 flex justify-center">
             <div className="flex">
               <div className="w-[300px] h-[500px] relative">
                 <Image src={'/one-img1.png'} alt="" fill className="object-cover" />
@@ -71,12 +72,10 @@ export default function Home() {
               <DetailButton className="mt-[50px]">查看详情</DetailButton>
             </div>
           </div>
-          {/* TODO: background placeholder */}
-          {/* <Image src={"/one-bg.png"} alt="" fill className="absolute w-full h-full object-cover" /> */}
         </div>
 
         <ColumnSwiper />
-        
+
         <NewSwiper className="py-[150px]" />
 
         <div

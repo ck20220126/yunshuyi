@@ -1,5 +1,6 @@
 import { Suspense } from 'react'
 import { AntdRegistry } from '@ant-design/nextjs-registry'
+import { StyleProvider } from '@ant-design/cssinjs';
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'

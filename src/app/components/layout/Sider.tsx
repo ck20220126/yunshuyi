@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { css } from '@emotion/react'
 import { usePathname } from 'next/navigation'
@@ -60,25 +60,25 @@ const MenuLayer = (props: { open?: boolean; onClose?: () => void }) => {
                 <li className="menu-item">
                   <Link href={'#'} className="menu-item__link">
                     询价采购
-                    <ArrowRight />
+                    <ArrowRight className="size-[16px]" />
                   </Link>
                 </li>
                 <li className="menu-item">
                   <Link href={'#'} className="menu-item__link">
                     招采报价
-                    <ArrowRight />
+                    <ArrowRight className="size-[16px]" />
                   </Link>
                 </li>
                 <li className="menu-item">
                   <Link href={'#'} className="menu-item__link">
                     招采结果查询
-                    <ArrowRight />
+                    <ArrowRight className="size-[16px]" />
                   </Link>
                 </li>
                 <li className="menu-item">
                   <Link href={'#'} className="menu-item__link">
                     我的采购清单
-                    <ArrowRight />
+                    <ArrowRight className="size-[16px]" />
                   </Link>
                 </li>
               </ul>
@@ -89,13 +89,13 @@ const MenuLayer = (props: { open?: boolean; onClose?: () => void }) => {
                 <li className="menu-item">
                   <Link href={'#'} className="menu-item__link">
                     云品优选
-                    <ArrowRight />
+                    <ArrowRight className="size-[16px]" />
                   </Link>
                 </li>
                 <li className="menu-item">
                   <Link href={'#'} className="menu-item__link">
                     我的购物车
-                    <ArrowRight />
+                    <ArrowRight className="size-[16px]" />
                   </Link>
                 </li>
               </ul>
@@ -106,7 +106,7 @@ const MenuLayer = (props: { open?: boolean; onClose?: () => void }) => {
                 <li className="menu-item">
                   <Link href={'#'} className="menu-item__link">
                     金融产品
-                    <ArrowRight />
+                    <ArrowRight className="size-[16px]" />
                   </Link>
                 </li>
               </ul>
@@ -117,7 +117,7 @@ const MenuLayer = (props: { open?: boolean; onClose?: () => void }) => {
                 <li className="menu-item">
                   <Link href={'#'} className="menu-item__link">
                     物流服务
-                    <ArrowRight />
+                    <ArrowRight className="size-[16px]" />
                   </Link>
                 </li>
               </ul>

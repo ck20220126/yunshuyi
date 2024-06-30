@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 'use client'
 
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import * as echarts from 'echarts/core'
-import ReactECharts from 'echarts-for-react'
+import ReactECharts, { EChartsInstance } from 'echarts-for-react'
 import Link from 'next/link'
 import DetailCover from '../components/DetailCover'
 import Divider from '../components/Divider'
@@ -12,7 +12,11 @@ import MallProduct from '../components/MallProduct'
 import MallCityCard from '../components/MallCityCard'
 import { ECharts } from 'echarts'
 
-function MyMap() {}
+const Map = (props: { option: any; className?: string; onChartReady?: (instance: EChartsInstance) => void; onEvents?: Record<string, Function> }) => {
+  return useMemo(() => {
+    return <ReactECharts option={props.option} className={props.className} style={{ height: '100%' }} onChartReady={props.onChartReady} onEvents={props.onEvents} />
+  }, [props.option])
+}
 
 export default function Store() {
   const echartsRef = useRef<ECharts>()
@@ -34,106 +38,77 @@ export default function Store() {
     init()
   }, [])
 
-  const option = {
-    series: [
-      {
-        type: 'map',
-        mapType: 'yunnanMap',
-        label: {
-          show: false,
-        },
-        itemStyle: {
-          areaColor: 'transparent',
-          borderColor: '#876442',
-          borderWidth: 2,
-        },
-        select: {
-          itemStyle: {
-            areaColor: 'transparent',
-          },
-          label: {
-            show: false,
-          },
-        },
-        emphasis: {
-          itemStyle: {
-            areaColor: 'transparent',
-          },
-          label: {
-            show: false,
-          },
-        },
-      },
-    ],
-    roam: false,
-    zoom: 1.25,
-  }
-
   const defaultCity = '昆明'
   const [city, setCity] = useState(defaultCity)
 
-  const fullMapoption = {
-    series: [
-      {
-        type: 'map',
-        mapType: 'yunnanFullMap',
-        nameMap: {
-          昆明市: '昆明',
-          曲靖市: '曲靖',
-          玉溪市: '玉溪',
-          保山市: '保山',
-          昭通市: '昭通',
-          丽江市: '丽江',
-          普洱市: '普洱',
-          临沧市: '临沧',
-          楚雄彝族自治州: '楚雄',
-          红河哈尼族彝族自治州: '红河',
-          文山壮族苗族自治州: '文山',
-          西双版纳傣族自治州: '西双版纳',
-          大理白族自治州: '大理',
-          德宏傣族景颇族自治州: '德宏',
-          怒江傈僳族自治州: '怒江',
-          迪庆藏族自治州: '迪庆',
-        },
-        borderColor: '#000', // 外边框颜色
-        borderWidth: 2, // 外边框宽度
-        label: {
-          show: true,
-          position: [1, 100],
-          fontSize: 13,
-          offset: [2, 0],
-          align: 'center',
-          color: '#86909C',
-        },
-        itemStyle: {
-          areaColor: '#F6EFE9',
-          borderColor: '#876442',
-          borderType: [2, 4],
-          borderDashOffset: 2,
-        },
-        select: {
-          itemStyle: {
-            areaColor: '#876442',
+  const fullMapoption = useMemo(() => {
+    return {
+      series: [
+        {
+          type: 'map',
+          mapType: 'yunnanFullMap',
+          nameMap: {
+            昆明市: '昆明',
+            曲靖市: '曲靖',
+            玉溪市: '玉溪',
+            保山市: '保山',
+            昭通市: '昭通',
+            丽江市: '丽江',
+            普洱市: '普洱',
+            临沧市: '临沧',
+            楚雄彝族自治州: '楚雄',
+            红河哈尼族彝族自治州: '红河',
+            文山壮族苗族自治州: '文山',
+            西双版纳傣族自治州: '西双版纳',
+            大理白族自治州: '大理',
+            德宏傣族景颇族自治州: '德宏',
+            怒江傈僳族自治州: '怒江',
+            迪庆藏族自治州: '迪庆',
           },
+          borderColor: '#000', // 外边框颜色
+          borderWidth: 2, // 外边框宽度
           label: {
-            color: '#fff',
+            show: true,
+            position: [1, 100],
+            fontSize: 13,
+            offset: [2, 0],
+            align: 'center',
+            color: '#86909C',
           },
-        },
-        emphasis: {
           itemStyle: {
-            areaColor: 'rgba(135,100,66, 0.2)',
+            areaColor: '#F6EFE9',
+            borderColor: '#876442',
+            borderType: [2, 4],
+            borderDashOffset: 2,
           },
-          label: {
-            color: '#876442',
+          select: {
+            itemStyle: {
+              areaColor: '#876442',
+            },
+            label: {
+              color: '#fff',
+              textBorderWidth: 1,
+              textBorderColor: '#876442'
+            },
           },
+          emphasis: {
+            itemStyle: {
+              areaColor: 'rgba(135,100,66, 0.2)',
+            },
+            label: {
+              textBorderWidth: 0,
+              color: '#876442',
+            },
+          },
+          roam: false,
+          zoom: 1.25,
         },
-        roam: false,
-        zoom: 1.25,
-      },
-    ],
-  }
+      ],
+    }
+  }, [])
 
-  function onChartReady(instance) {
+  const onChartReady = useCallback((instance) => {
+    if (echartsRef.current) return
 
     instance.dispatchAction({
       type: 'select',
@@ -142,54 +117,41 @@ export default function Store() {
     console.log('{onChartReady} instance:', instance)
 
     echartsRef.current = instance
-    // selectCity(defaultCity)
-  }
+  }, [])
 
-  function selectCity(_city: string) {
+  const selectCity = useCallback((_city) => {
+    setCity(_city)
     echartsRef.current?.dispatchAction?.({
       type: 'select',
       name: _city,
     })
-    
-    // setCity(_city)
-  }
-
-  const Map = (props: { option: any }) => {
-    return useMemo(() => {
-      return (
-        <ReactECharts
-          option={props.option}
-          className="absolute inset-0"
-          style={{ height: '100%' }}
-          onEvents={{
-            click: ({ name }) => {
-              selectCity(name)
-            },
-          }}
-          onChartReady={onChartReady}
-        />
-      )
-    }, [props.option])
-  }
+  }, [])
 
   return (
     <div className="pr-[232px]">
       <DetailCover image="/mall-header.png" title="禄劝农家散装自烤酒" subtitle="500g散装 | ¥25.00" />
-      <div className="px-[11.75%] pt-[150px] pb-[50px] min-h-[890px] flex bg-[#F6EFE9]">
+      <div className="px-[11.75%] pt-[150px] pb-[50px] min-h-[896px] flex bg-[#F6EFE9]">
         <div className="flex-1 relative">
           {initial && (
-            <>
-              {
-                /* <ReactECharts option={option} className="absolute inset-0" style={{ height: '100%' }} /> */
-                <Map option={fullMapoption} />
-              }
-            </>
+            <Map
+              option={fullMapoption}
+              onChartReady={onChartReady}
+              onEvents={{
+                click: ({ name }) => {
+                  selectCity(name)
+                },
+              }}
+              className="absolute inset-0"
+            />
           )}
         </div>
         <div className="flex-shrink-0">
-          <MallCityCard city={city} onChangeCity={(_city) => {
-            selectCity(_city)
-          }} />
+          <MallCityCard
+            city={city}
+            onChangeCity={(_city) => {
+              selectCity(_city)
+            }}
+          />
         </div>
       </div>
       <div className="px-[11.75%] py-[150px]">
