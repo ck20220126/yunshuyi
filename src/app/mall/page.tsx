@@ -1,7 +1,8 @@
 /** @jsxImportSource @emotion/react */
 'use client'
 
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { ECharts } from 'echarts'
 import * as echarts from 'echarts/core'
 import ReactECharts, { EChartsInstance } from 'echarts-for-react'
 import Link from 'next/link'
@@ -10,7 +11,7 @@ import Divider from '../components/Divider'
 import ArrowRight from '../components/icons/ArrowRight'
 import MallProduct from '../components/MallProduct'
 import MallCityCard from '../components/MallCityCard'
-import { ECharts } from 'echarts'
+import Image from 'next/image'
 
 const Map = (props: { option: any; className?: string; onChartReady?: (instance: EChartsInstance) => void; onEvents?: Record<string, Function> }) => {
   return useMemo(() => {
@@ -93,7 +94,7 @@ export default function Store() {
           },
           emphasis: {
             itemStyle: {
-              areaColor: 'rgba(135,100,66, 0.2)',
+              areaColor: '#DED1C5',
             },
             label: {
               textBorderWidth: 0,
@@ -130,8 +131,9 @@ export default function Store() {
   return (
     <div className="pr-[232px]">
       <DetailCover image="/mall-header.webp" title="禄劝农家散装自烤酒" subtitle="500g散装 | ¥25.00" />
-      <div className="px-[11.75%] pt-[150px] pb-[50px] min-h-[896px] flex bg-[#F6EFE9]">
-        <div className="flex-1 relative">
+      <div className="relative px-[11.75%] pt-[150px] pb-[50px] min-h-[896px] flex">
+        <Image src="/mall-map-bg.webp" fill alt='' />
+        <div className="flex-1 relative z-10">
           {initial && (
             <Map
               option={fullMapoption}
@@ -145,7 +147,7 @@ export default function Store() {
             />
           )}
         </div>
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 relative z-10">
           <MallCityCard
             city={city}
             onChangeCity={(_city) => {
