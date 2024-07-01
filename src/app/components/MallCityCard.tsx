@@ -17,13 +17,13 @@ const data = [
     products: [
       {
         id: '01',
-        image: '/mall-city-product-picture-0.png',
+        image: '/mall-city-product-picture-0.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.60',
       },
       {
         id: '02',
-        image: '/mall-city-product-picture-1.png',
+        image: '/mall-city-product-picture-1.webp',
         title: '洱宝话梅云南大理特产网红酸甜果干孕妇休闲零食 话梅80克*3袋',
         price: '32.00',
       },
@@ -37,13 +37,13 @@ const data = [
     products: [
       {
         id: '03',
-        image: '/mall-city-product-picture-2.png',
+        image: '/mall-city-product-picture-2.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.50',
       },
       {
         id: '04',
-        image: '/mall-city-product-picture-3.png',
+        image: '/mall-city-product-picture-3.webp',
         title: '登荣香辣爽口鸡辣子鸡肉蛋白肉好吃的辣条8090后怀旧美食小卖部小零食 爽口鸡23g*20包',
         price: '19.80',
       },
@@ -57,13 +57,13 @@ const data = [
     products: [
       {
         id: '01',
-        image: '/mall-city-product-picture-4.png',
+        image: '/mall-city-product-picture-4.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.60',
       },
       {
         id: '02',
-        image: '/mall-city-product-picture-5.png',
+        image: '/mall-city-product-picture-5.webp',
         title: '洱宝话梅云南大理特产网红酸甜果干孕妇休闲零食 话梅80克*3袋',
         price: '32.00',
       },
@@ -77,13 +77,13 @@ const data = [
     products: [
       {
         id: '03',
-        image: '/mall-city-product-picture-6.png',
+        image: '/mall-city-product-picture-6.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.50',
       },
       {
         id: '04',
-        image: '/mall-city-product-picture-7.png',
+        image: '/mall-city-product-picture-7.webp',
         title: '登荣香辣爽口鸡辣子鸡肉蛋白肉好吃的辣条8090后怀旧美食小卖部小零食 爽口鸡23g*20包',
         price: '19.80',
       },
@@ -97,13 +97,13 @@ const data = [
     products: [
       {
         id: '01',
-        image: '/mall-city-product-picture-8.png',
+        image: '/mall-city-product-picture-8.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.60',
       },
       {
         id: '02',
-        image: '/mall-city-product-picture-9.png',
+        image: '/mall-city-product-picture-9.webp',
         title: '洱宝话梅云南大理特产网红酸甜果干孕妇休闲零食 话梅80克*3袋',
         price: '32.00',
       },
@@ -117,13 +117,13 @@ const data = [
     products: [
       {
         id: '03',
-        image: '/mall-city-product-picture-10.png',
+        image: '/mall-city-product-picture-10.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.50',
       },
       {
         id: '04',
-        image: '/mall-city-product-picture-11.png',
+        image: '/mall-city-product-picture-11.webp',
         title: '登荣香辣爽口鸡辣子鸡肉蛋白肉好吃的辣条8090后怀旧美食小卖部小零食 爽口鸡23g*20包',
         price: '19.80',
       },
@@ -137,13 +137,13 @@ const data = [
     products: [
       {
         id: '01',
-        image: '/mall-city-product-picture-12.png',
+        image: '/mall-city-product-picture-12.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.60',
       },
       {
         id: '02',
-        image: '/mall-city-product-picture-13.png',
+        image: '/mall-city-product-picture-13.webp',
         title: '洱宝话梅云南大理特产网红酸甜果干孕妇休闲零食 话梅80克*3袋',
         price: '32.00',
       },
@@ -157,13 +157,13 @@ const data = [
     products: [
       {
         id: '03',
-        image: '/mall-city-product-picture-14.png',
+        image: '/mall-city-product-picture-14.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.50',
       },
       {
         id: '04',
-        image: '/mall-city-product-picture-15.png',
+        image: '/mall-city-product-picture-15.webp',
         title: '登荣香辣爽口鸡辣子鸡肉蛋白肉好吃的辣条8090后怀旧美食小卖部小零食 爽口鸡23g*20包',
         price: '19.80',
       },
@@ -178,13 +178,13 @@ const data = [
     products: [
       {
         id: '01',
-        image: '/mall-city-product-picture-16.png',
+        image: '/mall-city-product-picture-16.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.60',
       },
       {
         id: '02',
-        image: '/mall-city-product-picture-17.png',
+        image: '/mall-city-product-picture-17.webp',
         title: '洱宝话梅云南大理特产网红酸甜果干孕妇休闲零食 话梅80克*3袋',
         price: '32.00',
       },
@@ -198,13 +198,13 @@ const data = [
     products: [
       {
         id: '03',
-        image: '/mall-city-product-picture-18.png',
+        image: '/mall-city-product-picture-18.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.50',
       },
       {
         id: '04',
-        image: '/mall-city-product-picture-19.png',
+        image: '/mall-city-product-picture-19.webp',
         title: '登荣香辣爽口鸡辣子鸡肉蛋白肉好吃的辣条8090后怀旧美食小卖部小零食 爽口鸡23g*20包',
         price: '19.80',
       },
@@ -218,13 +218,13 @@ const data = [
     products: [
       {
         id: '01',
-        image: '/mall-city-product-picture-20.png',
+        image: '/mall-city-product-picture-20.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.60',
       },
       {
         id: '02',
-        image: '/mall-city-product-picture-21.png',
+        image: '/mall-city-product-picture-21.webp',
         title: '洱宝话梅云南大理特产网红酸甜果干孕妇休闲零食 话梅80克*3袋',
         price: '32.00',
       },
@@ -238,13 +238,13 @@ const data = [
     products: [
       {
         id: '03',
-        image: '/mall-city-product-picture-22.png',
+        image: '/mall-city-product-picture-22.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.50',
       },
       {
         id: '04',
-        image: '/mall-city-product-picture-23.png',
+        image: '/mall-city-product-picture-23.webp',
         title: '登荣香辣爽口鸡辣子鸡肉蛋白肉好吃的辣条8090后怀旧美食小卖部小零食 爽口鸡23g*20包',
         price: '19.80',
       },
@@ -258,13 +258,13 @@ const data = [
     products: [
       {
         id: '01',
-        image: '/mall-city-product-picture-24.png',
+        image: '/mall-city-product-picture-24.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.60',
       },
       {
         id: '02',
-        image: '/mall-city-product-picture-25.png',
+        image: '/mall-city-product-picture-25.webp',
         title: '洱宝话梅云南大理特产网红酸甜果干孕妇休闲零食 话梅80克*3袋',
         price: '32.00',
       },
@@ -278,13 +278,13 @@ const data = [
     products: [
       {
         id: '03',
-        image: '/mall-city-product-picture-26.png',
+        image: '/mall-city-product-picture-26.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.50',
       },
       {
         id: '04',
-        image: '/mall-city-product-picture-27.png',
+        image: '/mall-city-product-picture-27.webp',
         title: '登荣香辣爽口鸡辣子鸡肉蛋白肉好吃的辣条8090后怀旧美食小卖部小零食 爽口鸡23g*20包',
         price: '19.80',
       },
@@ -298,13 +298,13 @@ const data = [
     products: [
       {
         id: '01',
-        image: '/mall-city-product-picture-28.png',
+        image: '/mall-city-product-picture-28.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.60',
       },
       {
         id: '02',
-        image: '/mall-city-product-picture-29.png',
+        image: '/mall-city-product-picture-29.webp',
         title: '洱宝话梅云南大理特产网红酸甜果干孕妇休闲零食 话梅80克*3袋',
         price: '32.00',
       },
@@ -318,13 +318,13 @@ const data = [
     products: [
       {
         id: '03',
-        image: '/mall-city-product-picture-30.png',
+        image: '/mall-city-product-picture-30.webp',
         title: '宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦',
         price: '65.50',
       },
       {
         id: '04',
-        image: '/mall-city-product-picture-31.png',
+        image: '/mall-city-product-picture-31.webp',
         title: '登荣香辣爽口鸡辣子鸡肉蛋白肉好吃的辣条8090后怀旧美食小卖部小零食 爽口鸡23g*20包',
         price: '19.80',
       },

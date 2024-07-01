@@ -92,7 +92,7 @@ export default function Header(props: Props) {
           `}
         >
           <Link href={'/'}>
-            <Image src={backgroundOpacity <= 0.5 ? '/logo-white.png' : '/logo.png'} width={192} height={80} alt="logo" />
+            <Image src={backgroundOpacity <= 0.5 ? '/logo-white.webp' : '/logo.webp'} width={192} height={80} alt="logo" />
           </Link>
           <div className="inline-flex items-center">
             <Link href={'/pq-sale'} title="集采集售" className="item">

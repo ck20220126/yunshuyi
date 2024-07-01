@@ -12,21 +12,21 @@ import DetailButton from './DetailButton'
 const list = [
   {
     englishTitle: 'SCM',
-    img: '/column-swiper-1.png',
+    img: '/column-swiper-1.webp',
     title: '供应链商贸',
     desc: '搭建服务县域的供应链平台，助力供应链上下游之间实现数字化、扁平化、共享化，涵盖销售、 营销、物流等核心能力，助力县域挖掘经济发展新动能',
     link: '#',
   },
   {
     englishTitle: 'Finance',
-    img: '/column-swiper-2.png',
+    img: '/column-swiper-2.webp',
     title: '集采急售',
     desc: '构建“云数驿金融生态圈”，通过整合内外部产业资源、金融资源，发展金融业务平台，为客户提供便捷、高效、优质的金融服务，实现各方利益相关体的合作共赢',
     link: '#',
   },
   {
     englishTitle: 'Logistics',
-    img: '/column-swiper-3.png',
+    img: '/column-swiper-3.webp',
     title: '仓储物流',
     desc: '以物流数字经济构建发展新格局，利用互联网、物联网、大数据和人工智能作为技术支撑，搭建全新的物流仓储平台，全面提升商业流通效率、助力产业服务升级',
     link: '#',

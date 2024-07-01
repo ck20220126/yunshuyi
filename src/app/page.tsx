@@ -13,12 +13,12 @@ import Link from 'next/link'
 
 const banners = [
   {
-    url: '/home-banner-1.png',
+    url: '/home-banner-1.webp',
     title: '智能化供应链，引领数字化时代',
     subtitles: ['数智化大宗商品集采・集售', '供应链金融服务', '供应链仓储物流'],
   },
   {
-    url: '/home-banner-2.png',
+    url: '/home-banner-2.webp',
     title: '智能化供应链，引领数字化时代',
     subtitles: ['数智化大宗商品集采・集售', '供应链金融服务', '供应链仓储物流'],
   },
@@ -30,14 +30,14 @@ const news = [
     date: '2024-02-05',
     title: '关于用友畅捷通T+13和T+16系统的安全防护公告',
     link: '#',
-    image: '/new-img1.png',
+    image: '/new-img1.webp',
   },
   {
     type: '热点新闻',
     date: '2024-02-05',
     title: '关于支持实施县域商业建设行动的通知',
     link: '#',
-    image: '/new-img2.png',
+    image: '/new-img2.webp',
   },
 ]
 
@@ -48,14 +48,14 @@ export default function Home() {
       {/* content start */}
       <div className="pr-[232px]">
         <div className="py-[100px] px-[11.75%] relative">
-          <Image src={'/one-bg-2.png'} alt="" fill className="absolute w-full h-full object-cover" />
+          <Image src={'/one-bg-2.webp'} alt="" fill className="absolute w-full h-full object-cover" />
           <div className="relative z-10 flex justify-center">
             <div className="flex">
               <div className="w-[300px] h-[500px] relative">
-                <Image src={'/one-img1.png'} alt="" fill className="object-cover" />
+                <Image src={'/one-img1.webp'} alt="" fill className="object-cover" />
               </div>
               <div className="w-[300px] h-[500px] relative ml-[30px] mt-[100px]">
-                <Image src={'/one-img2.png'} alt="" fill className="object-cover" />
+                <Image src={'/one-img2.webp'} alt="" fill className="object-cover" />
               </div>
             </div>
             <div className="ml-[150px] mt-[100px]">
@@ -80,7 +80,7 @@ export default function Home() {
 
         <div
           className="min-h-[523px] px-[6.5%] pt-[100px] pb-[96px] text-white text-center"
-          style={{ background: 'url("/four-bg.png") no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}
+          style={{ background: 'url("/four-bg.webp") no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
           <h2 className="leading-[44px] text-[36px] font-[600]">立足供应链、服务产业链、创造价值链</h2>
           <p className="mt-[30px] leading-[24px] text-[16px]">致力构建新型行业生态、引领新型生活方式、关注社会群体和个体，为多元用户创造价值</p>
@@ -129,31 +129,31 @@ export default function Home() {
           {/* <div className="flex-shrink-0 wax-w-full w-[922px] h-[526px] bg-[red]/10"></div> */}
           <div className="flex-shrink-0 wax-w-full w-[922px] h-[526px] grid grid-cols-3 border-b border-[#EBECF0]">
             <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-top-[11px] before:-left-[1px] before:bg-[#E8ECF0] after:absolute after:w-[10px] after:h-[1px] after:-top-[1px] after:-left-[11px] after:bg-[#E8ECF0]">
-              <Image src="/business-partner-icon-1.png" alt="" width={191} height={88} />
+              <Image src="/business-partner-icon-1.webp" alt="" width={191} height={88} />
             </div>
             <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-top-[11px] before:-left-[1px] before:bg-[#E8ECF0]">
-              <Image src="/business-partner-icon-2.png" alt="" width={191} height={88} />
+              <Image src="/business-partner-icon-2.webp" alt="" width={191} height={88} />
             </div>
             <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-top-[11px] before:-left-[1px] before:bg-[#E8ECF0]">
-              <Image src="/business-partner-icon-3.png" alt="" width={191} height={88} />
+              <Image src="/business-partner-icon-3.webp" alt="" width={191} height={88} />
             </div>
             <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[10px] before:h-[1px] before:-top-[-1px] before:-left-[11px] before:bg-[#E8ECF0] after:absolute after:w-[10px] after:h-[1px] after:-bottom-[1px] after:-left-[11px] after:bg-[#E8ECF0]">
-              <Image src="/business-partner-icon-4.png" alt="" width={191} height={88} />
+              <Image src="/business-partner-icon-4.webp" alt="" width={191} height={88} />
             </div>
             <div className="flex items-center justify-center border-t border-l border-[#EBECF0]">
-              <Image src="/business-partner-icon-5.png" alt="" width={191} height={88} />
+              <Image src="/business-partner-icon-5.webp" alt="" width={191} height={88} />
             </div>
             <div className="flex items-center justify-center border-t border-l border-[#EBECF0]">
-              <Image src="/business-partner-icon-6.png" alt="" width={191} height={88} />
+              <Image src="/business-partner-icon-6.webp" alt="" width={191} height={88} />
             </div>
             <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-bottom-[11px] before:-left-[1px] before:bg-[#E8ECF0] after:absolute after:w-[10px] after:h-[1px] after:-bottom-[1px] after:-left-[11px] after:bg-[#E8ECF0]">
-              <Image src="/business-partner-icon-7.png" alt="" width={191} height={88} />
+              <Image src="/business-partner-icon-7.webp" alt="" width={191} height={88} />
             </div>
             <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-bottom-[11px] before:-left-[1px] before:bg-[#E8ECF0]">
-              <Image src="/business-partner-icon-8.png" alt="" width={191} height={88} />
+              <Image src="/business-partner-icon-8.webp" alt="" width={191} height={88} />
             </div>
             <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-bottom-[11px] before:-left-[1px] before:bg-[#E8ECF0]">
-              <Image src="/business-partner-icon-9.png" alt="" width={191} height={88} />
+              <Image src="/business-partner-icon-9.webp" alt="" width={191} height={88} />
             </div>
           </div>
         </div>

@@ -53,7 +53,7 @@ export default function RootLayout({
                   <footer className="bg-[#f7f8fa] mr-[232px] pt-[50px] pb-[40px] px-[10%] text-[#1D2129] text-[12px]">
                     <div className="flex flex-shrink-0">
                       <div>
-                        <Image src={'/logo-colorful.png'} width={150} height={50} alt="" />
+                        <Image src={'/logo-colorful.webp'} width={150} height={50} alt="" />
                         <p className="mt-[20px] flex items-center leading-[20px]">
                           <Image src="/ic-phone-fill.svg" width={16} height={16} alt="" className="mr-[10px]" />
                           <span>400-660-6399</span>
@@ -133,7 +133,7 @@ export default function RootLayout({
                       </div>
                       <div className="w-[1px] h-[146px] bg-[#EBECF0] mx-[70px]" />
                       <div className="flex-shrink-0 w-[120px] h-[120px]">
-                        <Image src={'/footer-qrcode.png'} width={120} height={120} alt="" />
+                        <Image src={'/footer-qrcode.webp'} width={120} height={120} alt="" />
                       </div>
                     </div>
                     <div className="w-full h-[1px] bg-[#EBECF0] mt-[50px]" />
@@ -143,11 +143,11 @@ export default function RootLayout({
                         <span>滇ICP备11003338号</span>
                         <span className="ml-[10px]">增值电信业务经营许可证号：滇B1、B2-20090035</span>
                         <span className="ml-[20px] inline-flex items-center">
-                          <Image src={'/footer-gongan.png'} width={16} height={16} alt="" className="inline-block mr-[5px]" />
+                          <Image src={'/footer-gongan.webp'} width={16} height={16} alt="" className="inline-block mr-[5px]" />
                           滇公网安备 53019002000175号
                         </span>
                         <span className="ml-[20px] inline-flex items-center">
-                          <Image src={'/footer-wangjian.png'} width={16} height={16} alt="" className="inline-block mr-[5px]" />
+                          <Image src={'/footer-wangjian.webp'} width={16} height={16} alt="" className="inline-block mr-[5px]" />
                           工商网监
                         </span>
                       </p>

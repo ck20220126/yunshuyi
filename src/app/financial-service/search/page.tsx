@@ -126,14 +126,14 @@ export default function Search() {
           showFilterBar={false}
         />
 
-        <FinancialServiceCard bankLogo="/bank-8.png" title="短期流动资金贷款" className="mt-[30px]" />
-        <FinancialServiceCard bankLogo="/bank-2.png" title="普惠型小微企业标准化房产抵押授信" className="mt-[30px]" />
-        <FinancialServiceCard bankLogo="/bank-8.png" title="短期流动资金贷款" className="mt-[30px]" />
-        <FinancialServiceCard bankLogo="/bank-2.png" title="普惠型小微企业标准化房产抵押授信" className="mt-[30px]" />
-        <FinancialServiceCard bankLogo="/bank-8.png" title="短期流动资金贷款" className="mt-[30px]" />
-        <FinancialServiceCard bankLogo="/bank-2.png" title="普惠型小微企业标准化房产抵押授信" className="mt-[30px]" />
-        <FinancialServiceCard bankLogo="/bank-8.png" title="短期流动资金贷款" className="mt-[30px]" />
-        <FinancialServiceCard bankLogo="/bank-2.png" title="普惠型小微企业标准化房产抵押授信" className="mt-[30px]" />
+        <FinancialServiceCard bankLogo="/bank-8.webp" title="短期流动资金贷款" className="mt-[30px]" />
+        <FinancialServiceCard bankLogo="/bank-2.webp" title="普惠型小微企业标准化房产抵押授信" className="mt-[30px]" />
+        <FinancialServiceCard bankLogo="/bank-8.webp" title="短期流动资金贷款" className="mt-[30px]" />
+        <FinancialServiceCard bankLogo="/bank-2.webp" title="普惠型小微企业标准化房产抵押授信" className="mt-[30px]" />
+        <FinancialServiceCard bankLogo="/bank-8.webp" title="短期流动资金贷款" className="mt-[30px]" />
+        <FinancialServiceCard bankLogo="/bank-2.webp" title="普惠型小微企业标准化房产抵押授信" className="mt-[30px]" />
+        <FinancialServiceCard bankLogo="/bank-8.webp" title="短期流动资金贷款" className="mt-[30px]" />
+        <FinancialServiceCard bankLogo="/bank-2.webp" title="普惠型小微企业标准化房产抵押授信" className="mt-[30px]" />
       </div>
     </div>
   )

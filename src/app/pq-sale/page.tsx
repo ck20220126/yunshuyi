@@ -474,7 +474,7 @@ export default function CpSale() {
 
   return (
     <div className="pr-[232px]">
-      <DetailCover image="/cp-sale-header-bg.png" title="大宗商品供应链" subtitle="立足供应链、服务产业链、创造价值链" />
+      <DetailCover image="/cp-sale-header-bg.webp" title="大宗商品供应链" subtitle="立足供应链、服务产业链、创造价值链" />
       <div className="ml-[11.75%]">
         <div className="mt-[150px]">
           <p className="leading-[44px] text-[20px] text-[#c9cdd4]">Procure</p>
@@ -484,18 +484,18 @@ export default function CpSale() {
       </div>
       <div className="flex gap-x-[30px] pb-[150px]">
         <div className="flex-1 flex gap-x-[30px] border-blue-100">
-          <ProcureClassCard id={1} image="/procure-img1.png" title="大宗粮油" className="h-full flex-1" />
+          <ProcureClassCard id={1} image="/procure-img1.webp" title="大宗粮油" className="h-full flex-1" />
           <div className="flex-1">
-            <ProcureClassCard id={2} image="/procure-img2.png" title="建筑建材"className="h-[280px]" />
-            <ProcureClassCard id={3} image="/procure-img3.png" title="办公用品" className="mt-[30px] h-[280px]" />
+            <ProcureClassCard id={2} image="/procure-img2.webp" title="建筑建材"className="h-[280px]" />
+            <ProcureClassCard id={3} image="/procure-img3.webp" title="办公用品" className="mt-[30px] h-[280px]" />
           </div>
         </div>
         <div className="flex-1 flex flex-col gap-x-[30px]">
           <div className="flex-1 flex">
-            <ProcureClassCard id={4} image="/procure-img4.png" title="日用百货" className="flex-1 h-[280px] " />
-            <ProcureClassCard id={5} image="/procure-img5.png" title="生鲜食品" className="ml-[30px] flex-1 h-[280px]" />
+            <ProcureClassCard id={4} image="/procure-img4.webp" title="日用百货" className="flex-1 h-[280px] " />
+            <ProcureClassCard id={5} image="/procure-img5.webp" title="生鲜食品" className="ml-[30px] flex-1 h-[280px]" />
           </div>
-          <ProcureClassCard id={6} image="/procure-img6.png" title="农资农产" className="flex-1 mt-[30px]" />
+          <ProcureClassCard id={6} image="/procure-img6.webp" title="农资农产" className="flex-1 mt-[30px]" />
         </div>
       </div>
 

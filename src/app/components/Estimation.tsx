@@ -26,7 +26,7 @@ const levels = [
 
 const list = [
   {
-    avatar: '/default-avatar.png',
+    avatar: '/default-avatar.webp',
     phone: '151****4389',
     name: '大理州人民政府办公室',
     rate: 5,
@@ -35,7 +35,7 @@ const list = [
     content: '是正品口价格实惠，物流快，会继续采购',
   },
   {
-    avatar: '/default-avatar.png',
+    avatar: '/default-avatar.webp',
     phone: '151****4389',
     name: '大理州人民政府办公室',
     rate: 4,
@@ -44,7 +44,7 @@ const list = [
     content: '是正品口价格实惠，物流快，会继续采购',
   },
   {
-    avatar: '/default-avatar.png',
+    avatar: '/default-avatar.webp',
     phone: '151****4389',
     name: '大理州人民政府办公室',
     rate: 5,
@@ -53,7 +53,7 @@ const list = [
     content: '是正品口价格实惠，物流快，会继续采购',
   },
   {
-    avatar: '/default-avatar.png',
+    avatar: '/default-avatar.webp',
     phone: '151****4389',
     name: '大理州人民政府办公室',
     rate: 4,
@@ -62,7 +62,7 @@ const list = [
     content: '是正品口价格实惠，物流快，会继续采购',
   },
   {
-    avatar: '/default-avatar.png',
+    avatar: '/default-avatar.webp',
     phone: '151****4389',
     name: '大理州人民政府办公室',
     rate: 5,
@@ -71,7 +71,7 @@ const list = [
     content: '是正品口价格实惠，物流快，会继续采购',
   },
   {
-    avatar: '/default-avatar.png',
+    avatar: '/default-avatar.webp',
     phone: '151****4389',
     name: '大理州人民政府办公室',
     rate: 4,

@@ -8,7 +8,7 @@ export default function Search() {
         <Breadcrumb list={[{ title: '首页', link: '/' }, { title: '金融服务', link: '/financial-service' }, { title: '金融产品', link: '/financial-service-search' }, { title: '金融产品详情' }]} />
         <div className="mt-[30px] border border-[#EBECF0]">
           <div className="px-[40px] py-[15px] flex items-center bg-[#f7f8fa]">
-            <img src={'/bank-8.png'} height={50} />
+            <img src={'/bank-8.webp'} height={50} />
             <div className="mx-[20px] w-[1px] h-[40px] bg-[#c9cdd4]" />
             <span className="leading-[28px] text-[20px] font-bold">短期流动资金贷款（示例）</span>
           </div>

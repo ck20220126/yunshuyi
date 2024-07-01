@@ -10,7 +10,7 @@ export default function Info() {
 
   return (
     <div className="pr-[232px]">
-      <DetailCover image="/info-header-bg.png" title="整合 · 共享 · 创新" subtitle="构建共融共生的供应链商业生态" />
+      <DetailCover image="/info-header-bg.webp" title="整合 · 共享 · 创新" subtitle="构建共融共生的供应链商业生态" />
       <div className="px-[11.75%] pt-[130px] pb-[150px]">
         <Tabs
           list={[

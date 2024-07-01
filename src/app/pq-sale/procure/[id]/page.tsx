@@ -239,19 +239,19 @@ export default function ProcureDetail() {
             <MainPictureSwiper
               images={[
                 {
-                  src: '/procure-picture-1.png',
+                  src: '/procure-picture-1.webp',
                 },
                 {
-                  src: '/procure-picture-2.png',
+                  src: '/procure-picture-2.webp',
                 },
                 {
-                  src: '/procure-picture-3.png',
+                  src: '/procure-picture-3.webp',
                 },
                 {
-                  src: '/procure-picture-4.png',
+                  src: '/procure-picture-4.webp',
                 },
                 {
-                  src: '/procure-picture-5.png',
+                  src: '/procure-picture-5.webp',
                 },
               ]}
               scene="procure"
@@ -336,11 +336,11 @@ export default function ProcureDetail() {
             </Link>
           </div>
           <div className="mt-[30px] grid grid-cols-5 gap-x-[22px]">
-            <ProcureProduct id="01" image="/procure-product-1.png" title="食用植物调和油 5L装 多种规格支持贴牌代工 批发代发" price="64.9" address="昆明高新区总仓发货" />
-            <ProcureProduct id="02" image="/procure-product-1.png" title="食用植物调和油 5L装 多种规格支持贴牌代工 批发代发" price="64.9" address="昆明高新区总仓发货" />
-            <ProcureProduct id="03" image="/procure-product-1.png" title="食用植物调和油 5L装 多种规格支持贴牌代工 批发代发" price="64.9" address="昆明高新区总仓发货" />
-            <ProcureProduct id="04" image="/procure-product-1.png" title="食用植物调和油 5L装 多种规格支持贴牌代工 批发代发" price="64.9" address="昆明高新区总仓发货" />
-            <ProcureProduct id="05" image="/procure-product-1.png" title="食用植物调和油 5L装 多种规格支持贴牌代工 批发代发" price="64.9" address="昆明高新区总仓发货" />
+            <ProcureProduct id="01" image="/procure-product-1.webp" title="食用植物调和油 5L装 多种规格支持贴牌代工 批发代发" price="64.9" address="昆明高新区总仓发货" />
+            <ProcureProduct id="02" image="/procure-product-1.webp" title="食用植物调和油 5L装 多种规格支持贴牌代工 批发代发" price="64.9" address="昆明高新区总仓发货" />
+            <ProcureProduct id="03" image="/procure-product-1.webp" title="食用植物调和油 5L装 多种规格支持贴牌代工 批发代发" price="64.9" address="昆明高新区总仓发货" />
+            <ProcureProduct id="04" image="/procure-product-1.webp" title="食用植物调和油 5L装 多种规格支持贴牌代工 批发代发" price="64.9" address="昆明高新区总仓发货" />
+            <ProcureProduct id="05" image="/procure-product-1.webp" title="食用植物调和油 5L装 多种规格支持贴牌代工 批发代发" price="64.9" address="昆明高新区总仓发货" />
           </div>
           <div className="mt-[100px] border border-[#EBECF0]">
             <div
@@ -414,7 +414,7 @@ export default function ProcureDetail() {
                       </p>
                       <br />
                       <p>
-                        <img src="/procure-detail-1.png" style={{ width: '100%' }} />
+                        <img src="/procure-detail-1.webp" style={{ width: '100%' }} />
                       </p>
                     </div>
                   </div>

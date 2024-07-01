@@ -16,7 +16,7 @@ const list = [
   {
     title: '小黄牛数字供应链平台',
     desc: '小黄牛供应链立足隆阳区发展基础，围绕民生相关的多个产业，以“小黄牛供应链平台”为承载，构建本地资源交易产业链整合，生活服务、公共服务为一体的“数字产业供应链集群”，打造数字经济产业供应链平台标杆。',
-    image: '/new-swiper-img1.png',
+    image: '/new-swiper-img1.webp',
     statistics: [
       {
         title: '合作企业 (个)',
@@ -39,7 +39,7 @@ const list = [
   {
     title: '知百道数字供应链平台',
     desc: '知百道数字经济供应链是楚雄彝族自治州首个县域数字经济产业供应链平台，旨在打造"传统企业+平台数字运营"的"城市大数据运营中心"，其核心是为武定县政府及用户提供便捷的服务及资源整合交易服务',
-    image: '/new-swiper-img2.png',
+    image: '/new-swiper-img2.webp',
     statistics: [
       {
         title: '合作企业 (个)',
@@ -62,7 +62,7 @@ const list = [
   {
     title: '峡谷之星数字供应链平台',
     desc: '峡谷之星县域经济产业数字化供应链平台立足兰坪县产业发展基础，围绕民生相关的多个产业，以"兰坪县域供应链平台"为承载，构建兰坪县资源交易、供应链服务，生活服务、公共服务为一体的"数字经济产业供应链集群”。',
-    image: '/new-swiper-img3.png',
+    image: '/new-swiper-img3.webp',
     statistics: [
       {
         title: '合作企业 (个)',

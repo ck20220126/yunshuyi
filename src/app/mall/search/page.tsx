@@ -146,18 +146,18 @@ export default function Search() {
           <div className="flex-1 px-[150px] pb-[150px]">
             <Breadcrumb list={[{ title: '首页', link: '/' }, { title: '云品优选', link: '/mall' }, { title: '全部商品' }]} className="my-[50px]" />
             <div className="mt-[50px] grid grid-cols-4 gap-[30px]">
-              <MallProduct id="01" image="/mall-product-1.png" title="曲靖 | 宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦" price="65.60" />
-              <MallProduct id="02" image="/mall-product-2.png" title="大理 | 洱宝话梅云南大理特产网红酸甜果干孕妇休闲零食 话梅80克*3袋" price="32.00" />
-              <MallProduct id="03" image="/mall-product-3.png" title="红河 | 石屏包浆豆腐700g*2盒" price="34.80" />
-              <MallProduct id="04" image="/mall-product-4.png" title="昆明 | 散养走地鸡 900g" price="59.00" />
-              <MallProduct id="001" image="/mall-product-1.png" title="曲靖 | 宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦" price="65.60" />
-              <MallProduct id="002" image="/mall-product-2.png" title="大理 | 洱宝话梅云南大理特产网红酸甜果干孕妇休闲零食 话梅80克*3袋" price="32.00" />
-              <MallProduct id="003" image="/mall-product-3.png" title="红河 | 石屏包浆豆腐700g*2盒" price="34.80" />
-              <MallProduct id="004" image="/mall-product-4.png" title="昆明 | 散养走地鸡 900g" price="59.00" />
-              <MallProduct id="0001" image="/mall-product-1.png" title="曲靖 | 宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦" price="65.60" />
-              <MallProduct id="0002" image="/mall-product-2.png" title="大理 | 洱宝话梅云南大理特产网红酸甜果干孕妇休闲零食 话梅80克*3袋" price="32.00" />
-              <MallProduct id="0003" image="/mall-product-3.png" title="红河 | 石屏包浆豆腐700g*2盒" price="34.80" />
-              <MallProduct id="0004" image="/mall-product-4.png" title="昆明 | 散养走地鸡 900g" price="59.00" />
+              <MallProduct id="01" image="/mall-product-1.webp" title="曲靖 | 宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦" price="65.60" />
+              <MallProduct id="02" image="/mall-product-2.webp" title="大理 | 洱宝话梅云南大理特产网红酸甜果干孕妇休闲零食 话梅80克*3袋" price="32.00" />
+              <MallProduct id="03" image="/mall-product-3.webp" title="红河 | 石屏包浆豆腐700g*2盒" price="34.80" />
+              <MallProduct id="04" image="/mall-product-4.webp" title="昆明 | 散养走地鸡 900g" price="59.00" />
+              <MallProduct id="001" image="/mall-product-1.webp" title="曲靖 | 宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦" price="65.60" />
+              <MallProduct id="002" image="/mall-product-2.webp" title="大理 | 洱宝话梅云南大理特产网红酸甜果干孕妇休闲零食 话梅80克*3袋" price="32.00" />
+              <MallProduct id="003" image="/mall-product-3.webp" title="红河 | 石屏包浆豆腐700g*2盒" price="34.80" />
+              <MallProduct id="004" image="/mall-product-4.webp" title="昆明 | 散养走地鸡 900g" price="59.00" />
+              <MallProduct id="0001" image="/mall-product-1.webp" title="曲靖 | 宣福威云南火腿宣威整腿切块2年乡村老火腿生吃三年中方礼盒无骨腊肉 1000g 2肥8瘦" price="65.60" />
+              <MallProduct id="0002" image="/mall-product-2.webp" title="大理 | 洱宝话梅云南大理特产网红酸甜果干孕妇休闲零食 话梅80克*3袋" price="32.00" />
+              <MallProduct id="0003" image="/mall-product-3.webp" title="红河 | 石屏包浆豆腐700g*2盒" price="34.80" />
+              <MallProduct id="0004" image="/mall-product-4.webp" title="昆明 | 散养走地鸡 900g" price="59.00" />
             </div>
             <div className="mt-[50px] flex justify-center">
               <Pagination

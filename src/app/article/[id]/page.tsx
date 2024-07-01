@@ -26,7 +26,7 @@ export default function Article() {
             近期，我们注意到用友畅捷通T+系列软件存在 SQL注入漏洞(QVD-2023-13612)反序列化漏洞(QVD-2023-13615)，且漏洞相关技术细节已在互联网上公开，风险系数较高，建议使用用友T+系列软件尽快进行漏洞修补。
           </p>
           <br />
-          <img src="/new-img1.png" style={{ width: '100%' }} />
+          <img src="/new-img1.webp" style={{ width: '100%' }} />
           <br />
           <p>
             <span className="font-bold">1.1 漏洞描述</span>
