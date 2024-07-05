@@ -88,6 +88,8 @@ const detail = {
   ],
 }
 
+export const runtime = 'edge';
+
 export default function QuotationForm() {
   const [inputMessage, setInputMessage] = useState('')
   const [liked, setLiked] = useState(false)

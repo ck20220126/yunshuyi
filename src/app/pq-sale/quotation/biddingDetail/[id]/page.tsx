@@ -55,6 +55,8 @@ const detail = {
   ],
 }
 
+export const runtime = 'edge';
+
 export default function BiddingDetail() {
   return (
     <div className="pr-[232px]">

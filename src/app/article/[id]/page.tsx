@@ -7,6 +7,8 @@ const data = {
   title: '关于用友畅捷通T+13和T+16系统的安全防护公告',
 }
 
+export const runtime = 'edge';
+
 export default function Article() {
   return (
     <div className="pr-[232px] pb-[150px]">

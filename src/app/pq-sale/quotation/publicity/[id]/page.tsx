@@ -59,6 +59,8 @@ const detail = {
   ],
 }
 
+export const runtime = 'edge';
+
 export default function Publicity() {
   return (
     <div className="pr-[232px]">

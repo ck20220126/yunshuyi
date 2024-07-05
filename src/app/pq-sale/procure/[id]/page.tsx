@@ -222,6 +222,8 @@ const detail = {
   ],
 }
 
+export const runtime = 'edge';
+
 export default function ProcureDetail() {
   const [liked, setLiked] = useState(false)
 
