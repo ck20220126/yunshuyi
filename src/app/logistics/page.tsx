@@ -1,29 +1,14 @@
 /** @jsxImportSource @emotion/react */
 'use client'
 
-import { css } from '@emotion/react'
+import { articles } from '@/utils/mock'
 import DetailCover from '../components/DetailCover'
 import ArticleCard from '../components/ArticleCard'
 
 const articleList = [
-  {
-    id: '1-1',
-    image: '/logistics-article-1.webp',
-    title: '智能仓储管理系统(WMS)',
-    desc: '新兴技术如自动化机器人（AGV/AMR）、无人驾驶车辆、自动分拣系统等正在逐步改变传统的仓储物流模式。这些技术提高了物流作业的效率和精确度，减少了人力成本，并且降低了错误率。',
-  },
-  {
-    id: '1-2',
-    image: '/logistics-article-2.webp',
-    title: '新兴物流技术',
-    desc: '新兴技术如自动化机器人（AGV/AMR）、无人驾驶车辆、自动分拣系统等正在逐步改变传统的仓储物流模式。这些技术提高了物流作业的效率和精确度，减少了人力成本，并且降低了错误率。',
-  },
-  {
-    id: '1-3',
-    image: '/logistics-article-3.webp',
-    title: '供应链战略与合作',
-    desc: '供应链战略与合作在仓储物流中的作用和重要性不仅体现在降低成本、提高效率、增强韧性和稳定性、促进创新、优化资源配置和提升服务水平等方面，还在于保障供应链的高效管理，从而为企业带来更大的竞争优势和长期发展潜力。',
-  },
+  articles['logistics-1'],
+  articles['logistics-2'],
+  articles['logistics-3'],
 ]
 
 export default function FinancialService() {

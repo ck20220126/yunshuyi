@@ -1,12 +1,13 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
-import Image from 'next/image'
+import { useMemo, useState } from 'react'
+import { articles } from '@/utils/mock'
+
 import Tabs from '../components/Tabs'
 import ArticleCard from '../components/ArticleCard'
 import DetailCover from '../components/DetailCover'
 
-const news = {
+/* const news = {
   'copanyNews': [
     {
       id: '0-1',
@@ -43,6 +44,11 @@ const news = {
       date: '2024-02-05',
     },
   ],
+} */
+
+const news = {
+  copanyNews: [articles['new-1'], articles['new-2']],
+  hotNews: [articles['new-3'], articles['new-4']],
 }
 
 export default function Info() {

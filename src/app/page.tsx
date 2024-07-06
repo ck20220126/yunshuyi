@@ -26,17 +26,17 @@ const banners = [
 
 const news = [
   {
+    id: 'home-1',
     type: '公司动态',
     date: '2024-02-05',
     title: '关于用友畅捷通T+13和T+16系统的安全防护公告',
-    link: '#',
     image: '/new-img1.webp',
   },
   {
+    id: 'home-2',
     type: '热点新闻',
     date: '2024-02-05',
     title: '关于支持实施县域商业建设行动的通知',
-    link: '#',
     image: '/new-img2.webp',
   },
 ]
@@ -69,7 +69,9 @@ export default function Home() {
               <p className="text-[#4e5969] leading-[28px] text-[16px]">
                 供应链是指在产品或服务从原材料采购到最终消费者手中的整个过程中，涉及到的物流、信息流和资金流的一系列活动和环节。包括了将产品从供应商送到消费者的整个链条，涵盖了生产及流通过程中，涉及将产品或服务提供给最终用户活动的上游与下游企业所形成的网链结构。
               </p>
-              <DetailButton className="mt-[50px]">查看详情</DetailButton>
+              <Link href="/info">
+                <DetailButton className="mt-[50px]">查看详情</DetailButton>
+              </Link>
             </div>
           </div>
         </div>

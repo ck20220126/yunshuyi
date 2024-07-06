@@ -87,10 +87,21 @@ const list = [
 const ToggleButton = (props: { className?: string; disabled?: boolean; onClick?: () => void }) => {
   return (
     <div
-      className={classNames('flex items-center justify-center size-[60px] rounded-full border border-[#86909C] cursor-pointer', { 'opacity-60 cursor-not-allowed': props.disabled }, props.className)}
+      className={classNames('flex items-center justify-center size-[60px] rounded-full border border-[#86909C] cursor-pointer text-[#86909C]', props.className)}
+      css={css`
+        ${props.disabled ? `
+          opacity: 0.6;
+          cursor: default;
+        ` : `
+          &:hover {
+            background-color: #1D5FFF;
+            color: white;
+          }
+        `}
+      `}
       onClick={!props.disabled ? props.onClick : undefined}
     >
-      <ArrowRight className="size-[24px] text-[#86909C] rotate-180" />
+      <ArrowRight className={classNames('size-[24px] rotate-180')} />
     </div>
   )
 }

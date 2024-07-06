@@ -131,8 +131,8 @@ export default function Store() {
   return (
     <div className="pr-[232px]">
       <DetailCover image="/mall-header.webp" title="禄劝农家散装自烤酒" subtitle="500g散装 | ¥25.00" />
-      <div className="relative px-[11.75%] pt-[150px] pb-[50px] min-h-[896px] flex">
-        <Image src="/mall-map-bg.webp" fill alt='' />
+      <div className="relative px-[11.75%] pt-[150px] pb-[50px] min-h-[896px] flex bg-[#fbf8f9]">
+        <Image src="/mall-map-bg.webp" fill alt='' className='object-cover' />
         <div className="flex-1 relative z-10">
           {initial && (
             <Map

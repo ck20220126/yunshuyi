@@ -48,7 +48,7 @@ export default function Header(props: Props) {
 
   return (
     <>
-      <header ref={footerRef} className={classNames('w-full max-w-[1920px] pr-[232px] fixed z-20 top-0 left-1/2 -translate-x-1/2', props.className)}>
+      <header ref={footerRef} className={classNames('w-full min-w-[1920px] pr-[232px] fixed z-20 top-0 left-1/2 -translate-x-1/2', props.className)}>
         <div
           className="absolute inset-0 bg-white z-0"
           css={css`
@@ -66,7 +66,7 @@ export default function Header(props: Props) {
           style={{ opacity: backgroundOpacity }}
         />
         <div
-          className={classNames('relative z-1 h-[150px] flex items-center justify-between px-[100px] text-[16px]', backgroundOpacity <= 0.5 && 'text-white')}
+          className={classNames('relative z-1 h-[128px] flex items-center justify-between px-[100px] text-[16px]', backgroundOpacity <= 0.5 && 'text-white')}
           css={css`
             .item {
               padding: 25px 0;
@@ -77,22 +77,22 @@ export default function Header(props: Props) {
                 display: block;
                 position: absolute;
                 left: 0;
-                right: 0;
                 bottom: 15px;
                 width: 100%;
                 height: 1px;
                 background-color: ${backgroundOpacity <= 0.5 ? 'white' : '#1D5FFF'};
-                opacity: 0;
-                transition: opacity linear 0.2s
+                transform: scale(0);
+                transform-origin: left center;
+                transition: transform 0.2s ease-in;
               }
               &:hover::after {
-                opacity: 1;
+                transform: scale(1);
               }
             }
           `}
         >
-          <Link href={'/'}>
-            <Image src={backgroundOpacity <= 0.5 ? '/logo-white.webp' : '/logo.webp'} width={192} height={80} alt="logo" />
+          <Link href={'/'} className='block flex-shrink-0'>
+            <Image src={backgroundOpacity <= 0.5 ? '/logo-white.webp' : '/logo.webp'} width={154} height={64} alt="logo" />
           </Link>
           <div className="inline-flex items-center">
             <Link href={'/pq-sale'} title="集采集售" className="item">

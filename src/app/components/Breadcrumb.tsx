@@ -16,7 +16,7 @@ export default function Breadcrumb(props: {
       {props.list.map((item, index) => (
         <div key={`menu-${index}`} className="flex items-center">
           {index > 0 && <ArrowRight className="size-[12px] mx-[5px]" />}
-          {index < list.length - 1 ? <Link href={item.link} className="hover:underline">{ item.title }</Link> : <span className="text-[#1D2129]">{ item.title }</span>}
+          {index < list.length - 1 ? <Link href={item?.link} className="hover:underline">{ item?.title }</Link> : <span className="text-[#1D2129]">{ item.title }</span>}
         </div>
       ))}
     </div>

@@ -42,7 +42,7 @@ export default function FinancialService() {
               <p className="mt-[10px] leading-[24px] text-[16px]">通过采用预付款融资模式，购货方可以延长支付采购货款的期限，提高其生产效率和经营效益。</p>
             </div>
             <div className="mt-[20px] h-[246px] relative">
-              <Image src={'/financial-service-img1.webp'} alt="" fill />
+              <Image src={'/financial-service-img1.webp'} alt="" fill className='object-cover' />
             </div>
           </div>
           <div className="item">
@@ -51,7 +51,7 @@ export default function FinancialService() {
               <p className="mt-[10px] leading-[24px] text-[16px]">通过采用预付款融资模式，购货方可以通过支付较少的资金获得更多的货物，从而实现杠杆采购。</p>
             </div>
             <div className="mt-[20px] h-[246px] relative">
-              <Image src={'/financial-service-img2.webp'} alt="" fill />
+              <Image src={'/financial-service-img2.webp'} alt="" fill className='object-cover' />
             </div>
           </div>
           <div className="item">
@@ -60,7 +60,7 @@ export default function FinancialService() {
               <p className="mt-[10px] leading-[24px] text-[16px]">降低金融机构坏账率，给投资方带来比较稳定的收益，达到各方共赢。</p>
             </div>
             <div className="mt-[20px] h-[246px] relative">
-              <Image src={'/financial-service-img3.webp'} alt="" fill />
+              <Image src={'/financial-service-img3.webp'} alt="" fill className='object-cover' />
             </div>
           </div>
         </div>
@@ -87,16 +87,16 @@ export default function FinancialService() {
           <Divider className="my-[30px]" />
         </div>
         <div className='border border-[#EBECF0] px-[30px] py-[44px] inline-flex flex-wrap gap-x-[100px] gap-y-[27px]'>
-          <img src='/bank-1.webp' height={50} />
-          <img src='/bank-2.webp' height={50} />
-          <img src='/bank-3.webp' height={50} />
-          <img src='/bank-4.webp' height={50} />
-          <img src='/bank-5.webp' height={50} />
-          <img src='/bank-6.webp' height={50} />
-          <img src='/bank-7.webp' height={50} />
-          <img src='/bank-8.webp' height={50} />
-          <img src='/bank-9.webp' height={50} />
-          <img src='/bank-10.webp' height={50} />
+          <img src='/bank-1.webp' className='h-[45px]' />
+          <img src='/bank-2.webp' className='h-[45px]' />
+          <img src='/bank-3.webp' className='h-[45px]' />
+          <img src='/bank-4.webp' className='h-[45px]' />
+          <img src='/bank-5.webp' className='h-[45px]' />
+          <img src='/bank-6.webp' className='h-[45px]' />
+          <img src='/bank-7.webp' className='h-[45px]' />
+          <img src='/bank-8.webp' className='h-[45px]' />
+          <img src='/bank-9.webp' className='h-[45px]' />
+          <img src='/bank-10.webp' className='h-[45px]' />
         </div>
       </div>
     </div>

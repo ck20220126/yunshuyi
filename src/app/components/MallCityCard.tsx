@@ -386,7 +386,7 @@ const MallCityCard = React.forwardRef<
   )
 
   return (
-    <div className={classNames('w-[590px] bg-white broder border-[#E6D9CD] px-[50px] py-[45px]', props.className)}>
+    <div className={classNames('w-[590px] bg-white broder border-[#E6D9CD] px-[50px] py-[45px]', props.className)} style={{ boxShadow: '0 0 40px rgba(0, 36, 124, 0.05)' }}>
       <div className="relative">
         <p className="leading-[44px] text-[20px] text-[#c9cdd4]">{current.englishCity}</p>
         <h2 className="mt-[5px] leading-[44px] text-[36px] text-[#1d2129] font-bold">{current.city}</h2>
@@ -394,7 +394,7 @@ const MallCityCard = React.forwardRef<
         <div className="absolute right-0 bottom-[30px] flex items-center select-none">
           <div
             role="button"
-            className={classNames('flex items-center justify-center size-[50px] rounded-full border border-[#86909C] text-[#86909C]', { 'bg-[#1D5FFF] border-transparent text-white': index > 0 })}
+            className={classNames('flex items-center justify-center size-[50px] rounded-full border border-[#86909C] text-[#86909C]', { 'hover:bg-[#1D5FFF] hover:border-transparent hover:text-white': index > 0 })}
             onClick={() => toggleIndex(-1)}
           >
             <ArrowRight className="size-[24px] transform rotate-180" />
@@ -402,7 +402,7 @@ const MallCityCard = React.forwardRef<
           <div
             role="button"
             className={classNames('ml-[20px] flex items-center justify-center size-[50px] rounded-full border border-[#86909C] text-[#86909C]', {
-              'bg-[#1D5FFF] border-transparent text-white': index < len - 1,
+              'hover:bg-[#1D5FFF] hover:border-transparent hover:text-white': index < len - 1,
             })}
             onClick={() => toggleIndex(1)}
           >
