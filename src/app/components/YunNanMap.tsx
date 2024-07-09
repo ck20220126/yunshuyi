@@ -87,6 +87,8 @@ const areaList = [
   },
 ]
 
+export const runtime = 'edge';
+
 export default function YunNanMap(props: { city?: string; onChangeCity?: (city: string) => void; className?: string }) {
   const [current, setCurrent] = useState<any>({})
 

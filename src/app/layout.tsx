@@ -16,6 +16,9 @@ import './globals.css'
 export const metadata: Metadata = {
   title: '云数驿',
   description: '云数驿',
+  icons: {
+    icon: '/favicon.ico'
+  }
 }
 
 export default function RootLayout({
