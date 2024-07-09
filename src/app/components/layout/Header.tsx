@@ -48,7 +48,7 @@ export default function Header(props: Props) {
 
   return (
     <>
-      <header ref={footerRef} className={classNames('w-full min-w-[1920px] pr-[232px] fixed z-20 top-0 left-1/2 -translate-x-1/2', props.className)}>
+      <header ref={footerRef} className={classNames('w-full min-w-[1400px] pr-[232px] fixed z-20 top-0 left-1/2 -translate-x-1/2', props.className)}>
         <div
           className="absolute inset-0 bg-white z-0"
           css={css`
@@ -147,7 +147,7 @@ export default function Header(props: Props) {
         </div>
       </header>
       {/* placeholder */}
-      {!immersive && <div className="h-[150px]" />}
+      {!immersive && <div className="h-[128px]" />}
     </>
   )
 }

@@ -12,6 +12,7 @@ import ArrowRight from '../components/icons/ArrowRight'
 import MallProduct from '../components/MallProduct'
 import MallCityCard from '../components/MallCityCard'
 import Image from 'next/image'
+import YunNanMap from '../components/YunNanMap'
 
 const Map = (props: { option: any; className?: string; onChartReady?: (instance: EChartsInstance) => void; onEvents?: Record<string, Function> }) => {
   return useMemo(() => {
@@ -69,7 +70,7 @@ export default function Store() {
           borderColor: '#000', // 外边框颜色
           borderWidth: 2, // 外边框宽度
           label: {
-            show: true,
+            show: false,
             position: [1, 100],
             fontSize: 13,
             offset: [2, 0],
@@ -87,9 +88,10 @@ export default function Store() {
               areaColor: '#876442',
             },
             label: {
+              show: false,
               color: '#fff',
               textBorderWidth: 1,
-              textBorderColor: '#876442'
+              textBorderColor: '#876442',
             },
           },
           emphasis: {
@@ -97,12 +99,13 @@ export default function Store() {
               areaColor: '#DED1C5',
             },
             label: {
+              show: false,
               textBorderWidth: 0,
               color: '#876442',
             },
           },
           roam: false,
-          zoom: 1.25,
+          // zoom: 1.25,
         },
       ],
     }
@@ -131,9 +134,9 @@ export default function Store() {
   return (
     <div className="pr-[232px]">
       <DetailCover image="/mall-header.webp" title="禄劝农家散装自烤酒" subtitle="500g散装 | ¥25.00" />
-      <div className="relative px-[11.75%] pt-[150px] pb-[50px] min-h-[896px] flex bg-[#fbf8f9]">
-        <Image src="/mall-map-bg.webp" fill alt='' className='object-cover' />
-        <div className="flex-1 relative z-10">
+      <div className="relative px-[11.75%] pt-[150px] pb-[50px] h-[896px] flex bg-[#fbf8f9]">
+        <Image src="/mall-map-bg.webp" fill alt="" className="object-cover" />
+        {/* <div className="flex-1 relative z-10">
           {initial && (
             <Map
               option={fullMapoption}
@@ -146,6 +149,21 @@ export default function Store() {
               className="absolute inset-0"
             />
           )}
+        </div> */}
+        <div className="flex-1 z-10 relative">
+          {/* {initial && (
+            <Map
+              option={fullMapoption}
+              onChartReady={onChartReady}
+              onEvents={{
+                click: ({ name }) => {
+                  selectCity(name)
+                },
+              }}
+              className="absolute inset-0"
+            />
+          )} */}
+          <YunNanMap city={city} onChangeCity={selectCity} />
         </div>
         <div className="flex-shrink-0 relative z-10">
           <MallCityCard

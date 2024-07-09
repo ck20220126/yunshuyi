@@ -46,7 +46,7 @@ export default function RootLayout({
               }}
             >
               <Suspense fallback={<p>loading...</p>}>
-                <div className="min-w-[1920px] w-full mx-auto min-h-dvh relative">
+                <div className="min-w-[1400px] w-full mx-auto min-h-dvh relative">
                   <Header className="z-10" />
                   <main className="w-full mx-auto relative z-0">{children}</main>
                   <Sider className="z-20" />
