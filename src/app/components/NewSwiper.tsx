@@ -124,7 +124,7 @@ export default function NewSwiper(props: { className?: string }) {
 
   return (
     // 1688
-    <div className={classNames('max-w-[1688px] pl-[17.77%] mx-[auto] relative flex', props.className)}>
+    <div className={classNames('relative flex', props.className)}>
       <div className="flex-1 mr-[10.8%] pt-[20px]">
         <p className="leading-[44px] text-[20px] text-[#c9cdd4]">County level</p>
         <h2 className="mt-[5px] leading-[44px] text-[36px] text-[#1d2129] font-bold">{list[swiperIndex].title}</h2>

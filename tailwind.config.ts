@@ -22,16 +22,22 @@ const config: Config = {
       margin: {
         'sider-padding': 'var(--sider-padding)',
       },
-      container: {
+      screens: {
+        'mobile': '320px',
+        'tablet': '640px',
+        'laptop': '1400px',
+        'desktop': '1921px',
+      },
+      /* container: {
         center: true,
         // padding: '2em',
         screens: {
           'mobile': '320px',
           'tablet': '640px',
           'laptop': '1400px',
-          'desktop': '1920px',
+          '2xl': '1920px',
         }
-      }
+      } */
     },
   },
   plugins: [],
