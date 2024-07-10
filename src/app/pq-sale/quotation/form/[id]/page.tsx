@@ -95,7 +95,7 @@ export default function QuotationForm() {
   const [liked, setLiked] = useState(false)
 
   return (
-    <div className="pr-[232px]">
+    <div className="pr-sider-padding">
       <div className="mx-[11.75%] mt-[30px] pb-[150px]">
         <Breadcrumb list={[{ title: '首页', link: '/' }, { title: '集采集售', link: '/pq-sale' }, { title: '招采报价', link: '/pq-sale/quotation' }, { title: '详情' }]} />
         <div className="mt-[30px] border border-[#EBECF0]">

@@ -10,7 +10,7 @@ export default function Procure() {
   const type = searchParams.get('type') || 'all'
 
   return (
-    <div className="pr-[232px]">
+    <div className="pr-sider-padding">
       <div className="mx-[11.75%] mt-[30px] pb-[150px]">
         <Breadcrumb list={[{ title: '首页', link: '/' }, { title: '集采集售', link: '/pq-sale' }, { title: '询价采购' }]} />
         <SearchCard

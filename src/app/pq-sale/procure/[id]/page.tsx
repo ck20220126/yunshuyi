@@ -234,7 +234,7 @@ export default function ProcureDetail() {
   }
   return (
     <>
-      <div className="pr-[232px]">
+      <div className="pr-sider-padding">
         <div className="mx-[11.75%] mt-[30px] pb-[150px]">
           <Breadcrumb list={[{ title: '首页', link: '/' }, { title: '集采集售', link: '/pq-sale' }, { title: '询价采购', link: '/pq-sale/procure' }, { title: '商品详情' }]} />
           <div className="mt-[50px] flex">

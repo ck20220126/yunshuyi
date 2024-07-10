@@ -53,7 +53,7 @@ export default function RootLayout({
                   <Header className="z-10" />
                   <main className="w-full mx-auto relative z-0">{children}</main>
                   <Sider className="z-20" />
-                  <footer className="bg-[#f7f8fa] mr-[232px] pt-[50px] pb-[40px] px-[10%] text-[#1D2129] text-[12px]">
+                  <footer className="bg-[#f7f8fa] mr-sider-padding pt-[50px] pb-[40px] px-[10%] text-[#1D2129] text-[12px]">
                     <div className="flex flex-shrink-0">
                       <div>
                         <Image src={'/logo-colorful.webp'} width={150} height={50} alt="" />

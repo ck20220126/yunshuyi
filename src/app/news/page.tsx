@@ -59,7 +59,7 @@ export default function Info() {
   }, [active])
 
   return (
-    <div className="pr-[232px]">
+    <div className="pr-sider-padding">
       <DetailCover image="/news-header-bg.webp" title="新闻与媒体" subtitle="传播行业互联网资讯，共建供应链体系" />
       <div className="px-[11.75%] pt-[130px] pb-[150px]">
         <Tabs

@@ -11,7 +11,7 @@ import FinancialServiceCard from '../components/FinancialServiceCard'
 
 export default function FinancialService() {
   return (
-    <div className="pr-[232px]">
+    <div className="pr-sider-padding">
       <DetailCover image="/financial-service-header.webp" title="供应链 金融服务支撑" subtitle="下游企业通过预付款融资方式拉长支付采购货款的账期，同时这也解决核心企业的生产资金需求" />
       <div className="px-[11.75%] py-[150px]">
         <div

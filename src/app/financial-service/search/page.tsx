@@ -4,7 +4,7 @@ import SearchCard from '@/app/components/SearchCard'
 
 export default function Search() {
   return (
-    <div className="pr-[232px]">
+    <div className="pr-sider-padding">
       <div className="mx-[11.75%] mt-[30px] pb-[150px]">
         <Breadcrumb list={[{ title: '首页', link: '/' }, { title: '金融服务', link: '/financial-service' }, { title: '金融产品' }]} />
         <SearchCard

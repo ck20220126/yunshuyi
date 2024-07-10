@@ -108,7 +108,7 @@ export default function Search() {
   }
 
   return (
-    <div className="pr-[232px]">
+    <div className="pr-sider-padding">
       <ConfigProvider
         theme={{
           components: {

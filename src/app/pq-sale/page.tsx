@@ -473,7 +473,7 @@ export default function CpSale() {
   }
 
   return (
-    <div className="pr-[232px]">
+    <div className="pr-sider-padding">
       <DetailCover image="/cp-sale-header-bg.webp" title="大宗商品供应链" subtitle="立足供应链、服务产业链、创造价值链" />
       <div className="ml-[11.75%]">
         <div className="mt-[150px]">

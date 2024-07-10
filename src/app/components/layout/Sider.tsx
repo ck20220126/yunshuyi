@@ -1,12 +1,12 @@
 /** @jsxImportSource @emotion/react */
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useState } from 'react'
 import classNames from 'classnames'
 import { css } from '@emotion/react'
-import { usePathname } from 'next/navigation'
-import { useWindowScroll } from '@uidotdev/usehooks'
 import { useLockBodyScroll } from 'react-use'
+import useLayout from '@/hooks/useLayout'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import ArrowRight from '../icons/ArrowRight'
@@ -177,29 +177,7 @@ const MenuLayer = (props: { open?: boolean; onClose?: () => void }) => {
 export default function Sider(props: Props) {
   const [openMenuPopup, setOpenMenuPopup] = useState(false)
 
-  const [{ y }] = useWindowScroll()
-  const [backgroundOpacity, setBackgroundOpacity] = useState(0)
-  const pathname = usePathname()
-  const immersive = useMemo(() => {
-    return ['/'].includes(pathname)
-  }, [pathname])
-
-  useEffect(() => {
-    if (!immersive) {
-      setBackgroundOpacity(1)
-      return
-    }
-
-    const _opacity = Math.min(1, y / 100)
-
-    if (_opacity !== backgroundOpacity) {
-      setBackgroundOpacity(_opacity)
-    }
-  }, [y])
-
-  useEffect(() => {
-    setBackgroundOpacity(immersive && y < 50 ? 0 : 1)
-  }, [immersive])
+  const { backgroundOpacity } = useLayout()
 
   return (
     <motion.div
@@ -214,7 +192,7 @@ export default function Sider(props: Props) {
       `}
     >
       <aside
-        className={classNames('w-[233px] fixed z-10 top-0 right-0 bottom-0 white text-center pt-[50px] pb-[184px] flex flex-col justify-center items-center', props.className)}
+        className={classNames('w-sider-width fixed z-10 top-0 right-0 bottom-0 white text-center pt-[50px] pb-[184px] flex flex-col justify-center items-center', props.className)}
         css={css`
           &::before {
             content: '';
@@ -230,7 +208,7 @@ export default function Sider(props: Props) {
           }
         `}
       >
-        <div className="bg-white absolute inset-0" style={{ opacity: backgroundOpacity }} />
+        <div className="bg-white absolute inset-0 transition-opacity" style={{ opacity: backgroundOpacity }} />
         <div
           className={classNames('absolute bottom-[138px] transition-opacity duration-200 more-menus', backgroundOpacity === 1 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none')}
         >
@@ -255,7 +233,7 @@ export default function Sider(props: Props) {
         </div>
       </aside>
       <div
-        className={classNames('fixed w-[233px] top-[35vh] right-0 z-[1001] flex justify-center leading-[20px] text-[14px]')}
+        className={classNames('fixed w-sider-width top-[35vh] right-0 z-[1001] flex justify-center leading-[20px] text-[14px]')}
         css={css`
           ${openMenuPopup &&
           `

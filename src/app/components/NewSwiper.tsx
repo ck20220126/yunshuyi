@@ -123,8 +123,9 @@ export default function NewSwiper(props: { className?: string }) {
   }
 
   return (
-    <div className={classNames('relative flex', props.className)}>
-      <div className="flex-1 ml-[11.75%] mr-[8%] pt-[20px]">
+    // 1688
+    <div className={classNames('max-w-[1688px] pl-[17.77%] mx-[auto] relative flex', props.className)}>
+      <div className="flex-1 mr-[10.8%] pt-[20px]">
         <p className="leading-[44px] text-[20px] text-[#c9cdd4]">County level</p>
         <h2 className="mt-[5px] leading-[44px] text-[36px] text-[#1d2129] font-bold">{list[swiperIndex].title}</h2>
         <Divider className="my-[30px]" />
@@ -135,12 +136,13 @@ export default function NewSwiper(props: { className?: string }) {
           <ToggleButton disabled={swiperIndex >= list.length - 1} className={'ml-[50px] rotate-180'} onClick={() => toggleSwiper('next')} />
         </div>
       </div>
-      <div className="w-[920px] h-[500px] border text-white">
+      {/* 420+200+920 1540 */} 
+      <div className="flex-shrink-0 w-[59.07%] aspect-[1.84/1] border text-white">
         <Swiper className="w-full h-full" allowTouchMove={false} onSwiper={(_swiper) => (swiper.current = _swiper)}>
           {list.map((item, index) => (
             <SwiperSlide key={`swiper-${index}`}>
               <motion.div className="relative w-full h-full" onHoverStart={() => setCurrent(index)} onHoverEnd={() => setCurrent(undefined)}>
-                <Image src={item.image} fill alt="" className="bg-red-200" />
+                <Image src={item.image} fill alt="" className="bg-red-200 object-cover" />
                 <motion.div
                   className="absolute bottom-0 left-0 w-full p-[50px]"
                   style={{ backgroundColor: 'rgba(29, 95, 255, var(--bg-opacity))' }}

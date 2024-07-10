@@ -46,19 +46,20 @@ export default function Home() {
     <div className="min-h-screen">
       <HomeBanner list={banners} className="w-full h-dvh" />
       {/* content start */}
-      <div className="pr-[232px]">
-        <div className="py-[100px] px-[11.75%] relative">
+      {/* 1688 */}
+      <div className="pr-sider-padding">
+        <div className="py-[100px] max-w-[1090px] mx-[auto] relative">
           <Image src={'/one-bg-2.webp'} alt="" fill className="absolute w-full h-full object-cover" />
           <div className="relative z-10 flex justify-center">
-            <div className="flex">
-              <div className="w-[300px] h-[500px] relative">
+            <div className="w-[60%] flex gap-x-[30px]">
+              <div className="flex-1 h-[500px] relative">
                 <Image src={'/one-img1.webp'} alt="" fill className="object-cover" />
               </div>
-              <div className="w-[300px] h-[500px] relative ml-[30px] mt-[100px]">
+              <div className="flex-1 h-[500px] relative mt-[100px]">
                 <Image src={'/one-img2.webp'} alt="" fill className="object-cover" />
               </div>
             </div>
-            <div className="ml-[150px] mt-[100px]">
+            <div className="w-[46.69%] flex-shrink-0 ml-[13.76%] mt-[100px]">
               <p className="leading-[44px] text-[20px] text-[#c9cdd4]">Supply Chain</p>
               <h2 className="mt-[5px] leading-[44px] text-[36px] text-[#1d2129] font-bold">
                 共建 · 共享 · 共赢
@@ -118,50 +119,51 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-[#F7F8FA] min-h-[810px] py-[150px] flex justify-between">
-          <div className="flex-1 ml-[11.75%] mr-[8%] pt-[20px]">
-            <p className="leading-[44px] text-[20px] text-[#c9cdd4]">Partners</p>
-            <h2 className="mt-[5px] leading-[44px] text-[36px] text-[#1d2129] font-bold">合作生态</h2>
-            <Divider className="my-[30px]" />
-            <p className="text-[#4e5969] leading-[28px] text-[16px]">
-              以强大的资源整合能力依托新型互联网技术基础，将供应链中的各个企业和组织连接起来，实现信息共享、业务协同和合作交流，为企业和组织提供更多的商业机会和合作伙伴，拓展业务领域和市场份额
-            </p>
-          </div>
-          {/* TODO: image placeholder */}
-          {/* <div className="flex-shrink-0 wax-w-full w-[922px] h-[526px] bg-[red]/10"></div> */}
-          <div className="flex-shrink-0 wax-w-full w-[922px] h-[526px] grid grid-cols-3 border-b border-[#EBECF0]">
-            <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-top-[11px] before:-left-[1px] before:bg-[#E8ECF0] after:absolute after:w-[10px] after:h-[1px] after:-top-[1px] after:-left-[11px] after:bg-[#E8ECF0]">
-              <Image src="/business-partner-icon-1.webp" alt="" width={191} height={88} />
+        <div className="bg-[#F7F8FA] py-[150px]">
+          <div className='max-w-[1688px] pl-[17.77%] mx-[auto] flex justify-between'>
+            <div className="flex-1 mr-[10.8%] pt-[20px]">
+              <p className="leading-[44px] text-[20px] text-[#c9cdd4]">Partners</p>
+              <h2 className="mt-[5px] leading-[44px] text-[36px] text-[#1d2129] font-bold">合作生态</h2>
+              <Divider className="my-[30px]" />
+              <p className="text-[#4e5969] leading-[28px] text-[16px]">
+                以强大的资源整合能力依托新型互联网技术基础，将供应链中的各个企业和组织连接起来，实现信息共享、业务协同和合作交流，为企业和组织提供更多的商业机会和合作伙伴，拓展业务领域和市场份额
+              </p>
             </div>
-            <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-top-[11px] before:-left-[1px] before:bg-[#E8ECF0]">
-              <Image src="/business-partner-icon-2.webp" alt="" width={191} height={88} />
-            </div>
-            <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-top-[11px] before:-left-[1px] before:bg-[#E8ECF0]">
-              <Image src="/business-partner-icon-3.webp" alt="" width={191} height={88} />
-            </div>
-            <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[10px] before:h-[1px] before:-top-[-1px] before:-left-[11px] before:bg-[#E8ECF0] after:absolute after:w-[10px] after:h-[1px] after:-bottom-[1px] after:-left-[11px] after:bg-[#E8ECF0]">
-              <Image src="/business-partner-icon-4.webp" alt="" width={191} height={88} />
-            </div>
-            <div className="flex items-center justify-center border-t border-l border-[#EBECF0]">
-              <Image src="/business-partner-icon-5.webp" alt="" width={191} height={88} />
-            </div>
-            <div className="flex items-center justify-center border-t border-l border-[#EBECF0]">
-              <Image src="/business-partner-icon-6.webp" alt="" width={191} height={88} />
-            </div>
-            <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-bottom-[11px] before:-left-[1px] before:bg-[#E8ECF0] after:absolute after:w-[10px] after:h-[1px] after:-bottom-[1px] after:-left-[11px] after:bg-[#E8ECF0]">
-              <Image src="/business-partner-icon-7.webp" alt="" width={191} height={88} />
-            </div>
-            <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-bottom-[11px] before:-left-[1px] before:bg-[#E8ECF0]">
-              <Image src="/business-partner-icon-8.webp" alt="" width={191} height={88} />
-            </div>
-            <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-bottom-[11px] before:-left-[1px] before:bg-[#E8ECF0]">
-              <Image src="/business-partner-icon-9.webp" alt="" width={191} height={88} />
+            {/* TODO: image placeholder */}
+            <div className="flex-shrink-0 w-[59.07%] h-[454px] grid grid-cols-3 border-b border-r border-[#EBECF0]">
+              <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-top-[11px] before:-left-[1px] before:bg-[#E8ECF0] after:absolute after:w-[10px] after:h-[1px] after:-top-[1px] after:-left-[11px] after:bg-[#E8ECF0]">
+                <Image src="/business-partner-icon-1.webp" alt="" width={149} height={70} />
+              </div>
+              <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-top-[11px] before:-left-[1px] before:bg-[#E8ECF0]">
+                <Image src="/business-partner-icon-2.webp" alt="" width={149} height={70} />
+              </div>
+              <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-top-[11px] before:-left-[1px] before:bg-[#E8ECF0] after:absolute after:w-[1px] after:h-[10px] after:-top-[11px] after:-right-[1px] after:bg-[#E8ECF0]">
+                <Image src="/business-partner-icon-3.webp" alt="" width={149} height={70} />
+              </div>
+              <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[10px] before:h-[1px] before:-top-[-1px] before:-left-[11px] before:bg-[#E8ECF0] after:absolute after:w-[10px] after:h-[1px] after:-bottom-[1px] after:-left-[11px] after:bg-[#E8ECF0]">
+                <Image src="/business-partner-icon-4.webp" alt="" width={149} height={70} />
+              </div>
+              <div className="flex items-center justify-center border-t border-l border-[#EBECF0]">
+                <Image src="/business-partner-icon-5.webp" alt="" width={149} height={70} />
+              </div>
+              <div className="flex items-center justify-center border-t border-l border-[#EBECF0]">
+                <Image src="/business-partner-icon-6.webp" alt="" width={149} height={70} />
+              </div>
+              <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-bottom-[11px] before:-left-[1px] before:bg-[#E8ECF0] after:absolute after:w-[10px] after:h-[1px] after:-bottom-[1px] after:-left-[11px] after:bg-[#E8ECF0]">
+                <Image src="/business-partner-icon-7.webp" alt="" width={149} height={70} />
+              </div>
+              <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-bottom-[11px] before:-left-[1px] before:bg-[#E8ECF0]">
+                <Image src="/business-partner-icon-8.webp" alt="" width={149} height={70} />
+              </div>
+              <div className="flex items-center justify-center border-t border-l border-[#EBECF0] relative before:absolute before:w-[1px] before:h-[10px] before:-bottom-[11px] before:-left-[1px] before:bg-[#E8ECF0] after:absolute after:w-[1px] after:h-[10px] after:-bottom-[11px] after:-right-[1px] after:bg-[#E8ECF0]">
+                <Image src="/business-partner-icon-9.webp" alt="" width={149} height={70} />
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="min-h-[810px] py-[150px] flex justify-between">
-          <div className="flex-1 ml-[11.75%] mr-[8%] pt-[20px]">
+        <div className="max-w-[1688px] py-[150px] pl-[17.77%] mx-[auto] flex justify-between">
+          <div className="flex-1 mr-[10.8%] pt-[20px]">
             <p className="leading-[44px] text-[20px] text-[#c9cdd4]">News</p>
             <h2 className="mt-[5px] leading-[44px] text-[36px] text-[#1d2129] font-bold">新闻与媒体</h2>
             <Divider className="my-[30px]" />
@@ -169,9 +171,9 @@ export default function Home() {
               <DetailButton className="mt-[50px]">查看更多</DetailButton>
             </Link>
           </div>
-          <div className="flex-shrink-0 wax-w-full w-[920px]">
+          <div className="flex-shrink-0 w-[59.07%]">
             {news.map((item, index) => (
-              <HomeNewCard data={item} key={`new-${index}`} className={classNames({ 'mt-[30px]': index > 0 })} />
+              <HomeNewCard data={item} key={`new-${index}`} className={classNames('aspect-[1.84/1] h-auto', { 'mt-[30px]': index > 0 })} />
             ))}
           </div>
         </div>

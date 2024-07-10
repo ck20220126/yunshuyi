@@ -26,7 +26,7 @@ export default function Article({ params }) {
 
   return (
     <div>
-      <div className="pr-[232px] pb-[150px]">
+      <div className="pr-sider-padding pb-[150px]">
         <div className="mt-[10px] mx-[11.75%] py-[20px] border-b border-[#EBECF0]">
           <Breadcrumb list={[{ title: '首页', link: '/' }, menu, { title: '文章详情' }]} />
         </div>

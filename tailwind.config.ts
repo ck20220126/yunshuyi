@@ -13,6 +13,25 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      width: {
+        'sider-width': 'var(--sider-width)',
+      },
+      padding: {
+        'sider-padding': 'var(--sider-padding)',
+      },
+      margin: {
+        'sider-padding': 'var(--sider-padding)',
+      },
+      container: {
+        center: true,
+        // padding: '2em',
+        screens: {
+          'mobile': '320px',
+          'tablet': '640px',
+          'laptop': '1400px',
+          'desktop': '1920px',
+        }
+      }
     },
   },
   plugins: [],

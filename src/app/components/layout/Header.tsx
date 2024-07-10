@@ -1,56 +1,35 @@
 /** @jsxImportSource @emotion/react */
 'use client'
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import classNames from 'classnames'
-import { useWindowScroll } from '@uidotdev/usehooks'
 import { css } from '@emotion/react'
-import { usePathname } from 'next/navigation'
 import Image from 'next/image'
+import useLayout from '@/hooks/useLayout'
 
 type Props = {
   className?: string
 }
 export default function Header(props: Props) {
-  const [{ y }] = useWindowScroll()
-  const [backgroundOpacity, setBackgroundOpacity] = useState(0)
-  const pathname = usePathname()
-  const immersive = useMemo(() => {
-    return ['/'].includes(pathname)
-  }, [pathname])
 
-  useEffect(() => {
-    if (!immersive) {
-      setBackgroundOpacity(1)
-      return
-    }
-
-    const _opacity = Math.min(1, y / 100)
-
-    if (_opacity !== backgroundOpacity) {
-      setBackgroundOpacity(_opacity)
-    }
-  }, [y])
-
-  useEffect(() => {
-    setBackgroundOpacity(immersive && y < 50 ? 0 : 1)
-  }, [immersive])
+  const { immersive, backgroundOpacity } = useLayout()
 
   const footerRef = useRef<HTMLDivElement>()
   const [rectHeight, setRectRight] = useState<number>(0)
   useEffect(() => {
     if (!footerRef.current) return
 
-    const _rect = footerRef.current.getBoundingClientRect()
-    setRectRight(_rect.height)
+    const { height } = footerRef.current.getBoundingClientRect()
+    setRectRight(height)
+
   }, [])
 
   return (
     <>
-      <header ref={footerRef} className={classNames('w-full min-w-[1400px] pr-[232px] fixed z-20 top-0 left-1/2 -translate-x-1/2', props.className)}>
+      <header ref={footerRef} className={classNames('w-full min-w-[1400px] pr-sider-padding fixed z-20 top-0 left-1/2 -translate-x-1/2', props.className)}>
         <div
-          className="absolute inset-0 bg-white z-0"
+          className="absolute inset-0 bg-white z-0 transition-opacity"
           css={css`
             &::after {
               content: '';
@@ -66,7 +45,7 @@ export default function Header(props: Props) {
           style={{ opacity: backgroundOpacity }}
         />
         <div
-          className={classNames('relative z-1 h-[128px] flex items-center justify-between px-[100px] text-[16px]', backgroundOpacity <= 0.5 && 'text-white')}
+          className={classNames('relative z-1 h-[128px] flex items-center justify-between pl-[100px] py-[28px] text-[16px]', backgroundOpacity <= 0.5 && 'text-white')}
           css={css`
             .item {
               padding: 25px 0;

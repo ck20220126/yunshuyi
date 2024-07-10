@@ -6,7 +6,15 @@
 @tailwind utilities;
 
 :root {
+    --sider-width: 232px;
+    --sider-padding: 232px;
 }
+@media (max-width: 1919px) {
+    :root {
+        --sider-width: 150px;
+        --sider-padding: 150px;
+    }
+  }
 
 @media (prefers-color-scheme: dark) {
     :root {

@@ -25,7 +25,7 @@ export default function NewCard(props: {
       <motion.div whileHover={{ '--bg-opacity': '0.8' } as any} onHoverStart={() => setHover(true)} onHoverEnd={() => setHover(false)}>
         <Image src={data.image} fill alt="" className="z-0" />
         <motion.div
-          className="absolute bottom-0 left-0 w-full p-[50px]"
+          className="absolute bottom-0 left-0 w-full p-[5%]"
           style={{ backgroundColor: 'rgba(29, 95, 255, var(--bg-opacity))' }}
           initial={false}
           animate={{ '--bg-opacity': hover ? 0.9 : 0 } as any}

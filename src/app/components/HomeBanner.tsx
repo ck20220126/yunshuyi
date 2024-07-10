@@ -98,7 +98,7 @@ export default function HomeBanner(props: Props) {
           
         </div>
       ))}
-      <div className="pagination absolute z-10 right-0 bottom-[100px] w-[232px] leading-[20px] text-[18px] text-center">
+      <div className="pagination absolute z-10 right-0 bottom-[100px] w-sider-width leading-[20px] text-[18px] text-center">
         <div className="inline-flex flex-col items-center justify-center leading-[20px] text-[18px]">
           <span className='font-bold'>{currentPage.toString().padStart(2, '0')}</span>
           <span className="w-full my-[.5em] h-[1px] bg-white transform -rotate-[15deg]"></span>

@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Search() {
   return (
-    <div className="pr-[232px]">
+    <div className="pr-sider-padding">
       <div className="mx-[11.75%] mt-[30px] pb-[150px]">
         <Breadcrumb list={[{ title: '首页', link: '/' }, { title: '金融服务', link: '/financial-service' }, { title: '金融产品', link: '/financial-service-search' }, { title: '金融产品详情' }]} />
         <div className="mt-[30px] border border-[#EBECF0]">

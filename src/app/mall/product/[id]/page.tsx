@@ -78,7 +78,7 @@ export default function ProcureDetail() {
   const [tabActive, setTabActive] = useState(tabs[0].name)
   return (
     <>
-      <div className="pr-[232px]">
+      <div className="pr-sider-padding">
         <div className="mx-[11.75%] mt-[30px] pb-[150px]">
           <Breadcrumb list={[{ title: '首页', link: '/' }, { title: '云品优选', link: '/mall' }, { title: '全部商品', link: '/mall/search' }, { title: '商品详情' }]} />
           <div className="mt-[50px] flex">
