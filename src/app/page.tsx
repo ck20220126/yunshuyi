@@ -22,6 +22,11 @@ const banners = [
     title: '智能化供应链，引领数字化时代',
     subtitles: ['数智化大宗商品集采・集售', '供应链金融服务', '供应链仓储物流'],
   },
+  {
+    url: '/home-banner-3.webp',
+    title: '智能化供应链，引领数字化时代',
+    subtitles: ['数智化大宗商品集采・集售', '供应链金融服务', '供应链仓储物流'],
+  }
 ]
 
 const news = [
