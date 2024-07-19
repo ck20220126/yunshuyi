@@ -58,19 +58,19 @@ const menus = [
     list: [
       {
         title: '询价采购',
-        link: '/pq-sale',
+        link: '/pq-sale/procure',
       },
       {
         title: '招采报价',
-        link: '/pq-sale',
+        link: '/pq-sale/quotation',
       },
       {
         title: '招采结果查询',
-        link: '#',
+        link: '/pq-sale/quotation/result',
       },
       {
         title: '我的采购清单',
-        link: '#',
+        link: '',
       },
     ],
   },
@@ -79,11 +79,11 @@ const menus = [
     list: [
       {
         title: '云品优选',
-        link: '#',
+        link: '/mall',
       },
       {
-        title: '云品优选',
-        link: '#',
+        title: '我的购物车',
+        link: '',
       },
     ],
   },
@@ -92,7 +92,7 @@ const menus = [
     list: [
       {
         title: '金融产品',
-        link: '#',
+        link: '/financial-service',
       },
     ],
   },
@@ -101,7 +101,7 @@ const menus = [
     list: [
       {
         title: '物流服务',
-        link: '#',
+        link: '/logistics',
       },
     ],
   },
